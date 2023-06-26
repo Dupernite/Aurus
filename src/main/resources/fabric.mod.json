@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "aurus",
+  "version": "${version}",
+  "name": "Aurus",
+  "description": "A Vanilla-Friendly Adventure Mod!",
+  "authors": ["Dupernite", "ImNotDai"],
+  "contact": {
+    "repo": "https://github.com/arthu/AurusMod"
+  },
+  "license": "MIT License",
+  "icon": "assets/Aurus/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.dupernite.aurus.AurusMod"
+    ],
+    "client": [
+      "com.dupernite.aurus.AurusModClient"
+    ]
+  },
+  "mixins": [
+    "Aurus.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
