@@ -11,7 +11,7 @@
 ⚠️ we plan to start full development before **September**!
 
 * New Structures in all Dimensions - **0% Complete** 
-* Small QOL changes to the game - **0% Complete** 
+* Small QOL changes to the game - **2% Complete** 
 * Add new Armor Trims - **0% Complete** 
 * New Biomes - **0% Complete** 
 * Rework Minecraft Biomes ( Examples but not confirmed: Birch Forest, Jungle, Deserts) - **0% Complete** 
