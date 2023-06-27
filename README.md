@@ -6,6 +6,8 @@
 ---
 **Aurus** is a WIP **free** **open-source** Minecraft mod that seamlessly enhances the familiar gameplay with exciting features while preserving the core essence of Minecraft. Explore a world where innovation meets tradition, unlocking limitless possibilities, and embarking on unforgettable adventures.
 
+⚠️ we plan to start working on the project before **September**!
+
 # Ideas and Development Progress
 * New Structures in all Dimensions - **0% Complete** 
 * Small QOL changes to the game - **0% Complete** 
