@@ -8,7 +8,7 @@
 
 # Ideas and Development Progress
 
-⚠️ we plan to start working on the project before **September**!
+⚠️ we plan to start full development before **September**!
 
 * New Structures in all Dimensions - **0% Complete** 
 * Small QOL changes to the game - **0% Complete** 
