@@ -1,7 +1,10 @@
 ![Aurus](https://i.imgur.com/7M6znfp.png)
 ![GitHub License](https://img.shields.io/github/license/Dupernite/Aurus)
-![Modrith Version](https://img.shields.io/modrinth/v/6UjXU2BV?logo=modrinth&link=https%3A%2F%2Fmodrinth.com%2Fmod%2Faurus)
-![Twitter Follow](https://img.shields.io/twitter/follow/TeamAurus?link=https%3A%2F%2Ftwitter.com%2Fteamaurus)
+<a href="https://modrinth.com/mod/aurus"><img src="https://img.shields.io/modrinth/v/6UjXU2BV?logo=modrinth&link=https%3A%2F%2Fmodrinth.com%2Fmod%2Faurus"></a>
+<a href="https://twitter.com/TeamAurus"><img src="https://img.shields.io/twitter/follow/TeamAurus?link=https%3A%2F%2Ftwitter.com%2Fteamaurus"></a>
+<!--- ![Modrith Version](https://img.shields.io/modrinth/v/6UjXU2BV?logo=modrinth&link=https%3A%2F%2Fmodrinth.com%2Fmod%2Faurus) -->
+<!--- ![Twitter Follow](https://img.shields.io/twitter/follow/TeamAurus?link=https%3A%2F%2Ftwitter.com%2Fteamaurus) -->
+
 
 ---
 **Aurus** is a WIP **free** **open-source** Minecraft mod that seamlessly enhances the familiar gameplay with exciting features while preserving the core essence of Minecraft. Explore a world where innovation meets tradition, unlocking limitless possibilities, and embarking on unforgettable adventures.
