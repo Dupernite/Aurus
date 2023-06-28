@@ -1,6 +1,9 @@
 package com.dupernite.aurus;
 
 import com.dupernite.aurus.block.ModBlocks;
+import com.dupernite.aurus.item.ModItemGroup;
+import com.dupernite.aurus.item.ModItems;
+import com.dupernite.aurus.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,6 +15,9 @@ public class AurusMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        ModItemGroup.registerModItemGroup();
+        ModItems.registerModItems();
         ModBlocks.registerModBlocks();
+        ModWorldGeneration.generateModWorldGen();
     }
 }

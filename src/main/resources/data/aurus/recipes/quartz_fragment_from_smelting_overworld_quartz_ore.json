@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.2,
+  "group": "quartz_fragment",
+  "ingredient": {
+    "item": "aurus:overworld_quartz_ore"
+  },
+  "result": "aurus:quartz_fragment"
+}

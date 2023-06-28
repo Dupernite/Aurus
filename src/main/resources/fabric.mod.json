@@ -9,7 +9,7 @@
     "repo": "https://github.com/arthu/AurusMod"
   },
   "license": "MIT License",
-  "icon": "assets/Aurus/icon.png",
+  "icon": "assets/aurus/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -17,6 +17,9 @@
     ],
     "client": [
       "com.dupernite.aurus.AurusModClient"
+    ],
+    "fabric-datagen": [
+      "com.dupernite.aurus.AurusModDataGenerator"
     ]
   },
   "mixins": [
