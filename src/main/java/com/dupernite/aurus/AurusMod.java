@@ -1,6 +1,7 @@
 package com.dupernite.aurus;
 
 import com.dupernite.aurus.block.ModBlocks;
+import com.dupernite.aurus.entity.ModEntity;
 import com.dupernite.aurus.item.ModItemGroup;
 import com.dupernite.aurus.item.ModItems;
 import com.dupernite.aurus.world.gen.ModWorldGeneration;
@@ -18,6 +19,7 @@ public class AurusMod implements ModInitializer {
         ModItemGroup.registerModItemGroup();
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
+
         ModWorldGeneration.generateModWorldGen();
     }
 }
