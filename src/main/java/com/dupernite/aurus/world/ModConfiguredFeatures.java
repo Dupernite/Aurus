@@ -1,7 +1,7 @@
 package com.dupernite.aurus.world;
 
 import com.dupernite.aurus.AurusMod;
-import com.dupernite.aurus.block.ModBlocks;
+import com.dupernite.aurus.block.ModBlock;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -26,8 +26,8 @@ public class ModConfiguredFeatures {
         RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
         List<OreFeatureConfig.Target> overworldCitrineOres =
-                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.OVERWORLD_QUARTZ_ORE.getDefaultState()),
-                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_OVERWORLD_QUARTZ_ORE.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlock.OVERWORLD_QUARTZ_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlock.DEEPSLATE_OVERWORLD_QUARTZ_ORE.getDefaultState()));
 
         register(context, QUARTZ_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldCitrineOres, 12));
     }

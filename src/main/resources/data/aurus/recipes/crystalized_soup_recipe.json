@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "QBQ",
+    " O ",
+    "   "
+  ],
+  "key": {
+    "Q": {
+      "item": "aurus:quartz_fragment"
+    },
+    "B": {
+      "item": "minecraft:beetroot"
+    },
+    "O": {
+      "item": "minecraft:bowl"
+    }
+  },
+  "result": {
+    "item": "aurus:crystalized_soup"
+  }
+}

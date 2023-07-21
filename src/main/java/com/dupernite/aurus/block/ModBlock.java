@@ -14,7 +14,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 
-public class ModBlocks {
+public class ModBlock {
 
 
     //Register Blocks
