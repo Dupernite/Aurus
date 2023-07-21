@@ -14,7 +14,7 @@ public class ModItem {
         AurusMod.LOGGER.info("Registering Mod Items for" + AurusMod.MOD_ID);
     }
     public static final Item QUARTZ_FRAGMENT = registerItem("quartz_fragment", new Item(new FabricItemSettings()));
-    public static final Item CRYSTALIZED_SOUP = registerItem("crystalized_soup", new Item(new FabricItemSettings().food(new FoodComponent.Builder().hunger(5).saturationModifier(1f).build())));
+    public static final Item CRYSTALIZED_SOUP = registerItem("crystalized_soup", new Item(new FabricItemSettings().food(new FoodComponent.Builder().hunger(7).saturationModifier(0.5f).build())));
     public static final Item SPEAR = registerItem("spear", new ModSpearItem(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE).maxDamage(10)));
     public static final Item NETHERITE_HORSE_ARMOR = registerItem("netherite_horse_armor", new HorseArmorItem(14, "netherite", new FabricItemSettings()));
     public static final Item COIN = registerItem("coin", new Item(new FabricItemSettings()));

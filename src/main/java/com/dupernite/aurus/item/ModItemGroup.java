@@ -18,10 +18,13 @@ public class ModItemGroup {
                     entries.add(ModBlock.DEEPSLATE_OVERWORLD_QUARTZ_ORE);
                     entries.add(ModBlock.OVERWORLD_QUARTZ_ORE);
                     entries.add(ModItem.QUARTZ_FRAGMENT);
-                    entries.add(ModItem.SPEAR);
                     entries.add(ModItem.CRYSTALIZED_SOUP);
                     entries.add(ModItem.NETHERITE_HORSE_ARMOR);
                     entries.add(ModItem.COIN);
+                    entries.add(ModItem.DIVING_HELMET);
+                    entries.add(ModItem.DIVING_CHESTPLATE);
+                    entries.add(ModItem.DIVING_LEGGINGS);
+                    entries.add(ModItem.DIVING_BOOTS);
                 }).build());
     }
 }
