@@ -1,7 +1,11 @@
 {
   "item.aurus.quartz_fragment": "Quartz Fragment",
   "item.aurus.spear":  "Spear",
+  "item.aurus.crystalized_soup":  "Crystalized Beetroot Soup",
   "itemgroup.aurustab": "Aurus",
   "block.aurus.overworld_quartz_ore": "Quartz Ore",
-  "block.aurus.deepslate_overworld_quartz_ore": "Deepslate Quartz Ore"
+  "block.aurus.deepslate_overworld_quartz_ore": "Deepslate Quartz Ore",
+  "entity.aurus.spear_entity": "Spear",
+  "item.aurus.netherite_horse_armor": "Netherite Horse Armor",
+  "item.aurus.coin": "Coin"
 }

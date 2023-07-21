@@ -6,7 +6,7 @@
 package com.dupernite.aurus.item.Spear;
 
 import com.dupernite.aurus.entity.ModEntity;
-import com.dupernite.aurus.item.ModItems;
+import com.dupernite.aurus.item.ModItem;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -38,8 +38,8 @@ public class ModSpearEntity extends PersistentProjectileEntity {
     public int returnTimer;
 
     public ModSpearEntity(World world, LivingEntity owner, ItemStack stack) {
-        super(EntityType.TRIDENT, owner, world);
-        this.spearStack = new ItemStack(ModItems.SPEAR);
+        super(ModEntity.SPEAR_ENTITY, owner, world);
+        this.spearStack = new ItemStack(ModItem.SPEAR);
         this.spearStack = stack.copy();
         this.dataTracker.set(LOYALTY, (byte)EnchantmentHelper.getLoyalty(stack));
         this.dataTracker.set(ENCHANTED, stack.hasGlint());
