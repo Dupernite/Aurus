@@ -12,7 +12,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 
-public class ModBlocks {
+public class ModBlock {
 
 
     //Register Blocks

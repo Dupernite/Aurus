@@ -23,7 +23,7 @@ Caused by: java.lang.ExceptionInInitializerError
 Caused by: java.lang.RuntimeException: Unable to have damage AND stack.
 	at net.minecraft.item.Item$Settings.maxCount(Item.java:141)
 	at net.fabricmc.fabric.api.item.v1.FabricItemSettings.maxCount(FabricItemSettings.java:67)
-	at com.dupernite.aurus.item.ModItems.<clinit>(ModItems.java:17)
+	at com.dupernite.aurus.item.ModItem.<clinit>(ModItems.java:17)
 	... 10 more
 
 
