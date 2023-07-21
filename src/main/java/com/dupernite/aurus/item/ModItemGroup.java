@@ -18,6 +18,7 @@ public class ModItemGroup {
                     entries.add(ModBlocks.DEEPSLATE_OVERWORLD_QUARTZ_ORE);
                     entries.add(ModBlocks.OVERWORLD_QUARTZ_ORE);
                     entries.add(ModItems.QUARTZ_FRAGMENT);
+                    entries.add(ModItems.SPEAR);
                 }).build());
     }
 }
