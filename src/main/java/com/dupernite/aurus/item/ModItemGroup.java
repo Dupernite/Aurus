@@ -25,6 +25,7 @@ public class ModItemGroup {
                     entries.add(ModItem.DIVING_CHESTPLATE);
                     entries.add(ModItem.DIVING_LEGGINGS);
                     entries.add(ModItem.DIVING_BOOTS);
+                    entries.add(ModItem.TANK);
                 }).build());
     }
 }

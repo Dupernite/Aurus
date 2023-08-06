@@ -31,7 +31,8 @@ public class ModItem {
     public static final Item DIVING_BOOTS = registerItem("diving_boots", new ArmorItem(ModArmorMaterial.DIVING, ArmorItem.Type.BOOTS, new FabricItemSettings().rarity(Rarity.RARE)));
 
     //Others
-    public static final Item COIN = registerItem("coin", new Item(new FabricItemSettings()));
+    public static final Item COIN = registerItem("coin", new Item(new FabricItemSettings().maxCount(128)));
+    public static final Item TANK = registerItem("tank", new Item(new FabricItemSettings().maxCount(8)));
 
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, new Identifier(AurusMod.MOD_ID, name), item);
