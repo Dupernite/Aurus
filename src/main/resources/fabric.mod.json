@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "aurus",
   "version": "${version}",
-  "name": "Aurus",
-  "description": "A Vanilla-Friendly Adventure Mod!",
+  "name": "Aurus: Novae Terrae",
+  "description": "A not so Vanilla-Friendly Adventure Mod!",
   "authors": ["Dupernite", "ImNotDai"],
   "contact": {
     "repo": "https://github.com/arthu/AurusMod"

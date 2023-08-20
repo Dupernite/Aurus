@@ -2,11 +2,10 @@ package com.dupernite.aurus.item.Spear;
 
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
-import net.minecraft.client.render.entity.model.EntityModel;
+import net.minecraft.client.render.entity.model.SinglePartEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.entity.Entity;
 
-public class ModSpearEntityModel extends EntityModel<Entity> {
+public class ModSpearEntityModel<T extends NewSpearEntity> extends SinglePartEntityModel<T> {
     private final ModelPart Head;
     private final ModelPart ZAxis2;
     private final ModelPart _z3;
@@ -75,11 +74,18 @@ public class ModSpearEntityModel extends EntityModel<Entity> {
         return TexturedModelData.of(modelData, 32, 32);
     }
     @Override
-    public void setAngles(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-    }
-    @Override
     public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
         Head.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
         Cable.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
+    }
+
+    @Override
+    public ModelPart getPart() {
+        return null;
+    }
+
+    @Override
+    public void setAngles(T entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch) {
+
     }
 }

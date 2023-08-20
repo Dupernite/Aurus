@@ -1,0 +1,15 @@
+{
+  "name": "Tank",
+  "icon": "aurus:tank",
+  "category": "aurus:recipes",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "A crafting Item"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "aurus:tank_recipe"
+    }
+  ]
+}

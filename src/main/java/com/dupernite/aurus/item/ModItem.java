@@ -25,10 +25,10 @@ public class ModItem {
 
     //Armor
     public static final Item NETHERITE_HORSE_ARMOR = registerItem("netherite_horse_armor", new HorseArmorItem(14, "netherite", new FabricItemSettings().rarity(Rarity.EPIC)));
-    public static final Item DIVING_HELMET = registerItem("diving_helmet", new ArmorItem(ModArmorMaterial.DIVING, ArmorItem.Type.HELMET, new FabricItemSettings().rarity(Rarity.RARE)));
-    public static final Item DIVING_CHESTPLATE = registerItem("diving_chestplate", new ArmorItem(ModArmorMaterial.DIVING, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().rarity(Rarity.RARE)));
-    public static final Item DIVING_LEGGINGS = registerItem("diving_leggings", new ArmorItem(ModArmorMaterial.DIVING, ArmorItem.Type.LEGGINGS, new FabricItemSettings().rarity(Rarity.RARE)));
-    public static final Item DIVING_BOOTS = registerItem("diving_boots", new ArmorItem(ModArmorMaterial.DIVING, ArmorItem.Type.BOOTS, new FabricItemSettings().rarity(Rarity.RARE)));
+    public static final Item DIVING_HELMET = registerItem("diving_helmet", new DivingArmorEffect(ModArmorMaterial.DIVING, ArmorItem.Type.HELMET, new FabricItemSettings().rarity(Rarity.RARE)));
+    public static final Item DIVING_CHESTPLATE = registerItem("diving_chestplate", new DivingArmorEffect(ModArmorMaterial.DIVING, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().rarity(Rarity.RARE)));
+    public static final Item DIVING_LEGGINGS = registerItem("diving_leggings", new DivingArmorEffect(ModArmorMaterial.DIVING, ArmorItem.Type.LEGGINGS, new FabricItemSettings().rarity(Rarity.RARE)));
+    public static final Item DIVING_BOOTS = registerItem("diving_boots", new DivingArmorEffect(ModArmorMaterial.DIVING, ArmorItem.Type.BOOTS, new FabricItemSettings().rarity(Rarity.RARE)));
 
     //Others
     public static final Item COIN = registerItem("coin", new Item(new FabricItemSettings().maxCount(128)));
