@@ -1,7 +1,9 @@
 package com.dupernite.aurus;
 
 import com.dupernite.aurus.block.ModBlock;
-import com.dupernite.aurus.entity.ModEntity;
+import com.dupernite.aurus.block.entity.ModBlockEntity;
+import com.dupernite.aurus.recipe.ModRecipe;
+import com.dupernite.aurus.screen.ModScreenHandlers;
 import com.dupernite.aurus.item.ModItemGroup;
 import com.dupernite.aurus.item.ModItem;
 import com.dupernite.aurus.world.gen.ModWorldGeneration;
@@ -21,5 +23,9 @@ public class AurusMod implements ModInitializer {
         ModBlock.registerModBlocks();
 
         ModWorldGeneration.generateModWorldGen();
+        ModBlockEntity.registerBlockEntities();
+        ModScreenHandlers.registerScreenHandler();
+
+        ModRecipe.registerRecipe();
     }
 }

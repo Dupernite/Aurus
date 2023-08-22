@@ -1,0 +1,24 @@
+{
+  "type": "aurus:upgrader",
+  "ingredients": [
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:green_dye"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "aurus:quartz_fragment"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "aurus:diving_upgrade"
+  }
+}

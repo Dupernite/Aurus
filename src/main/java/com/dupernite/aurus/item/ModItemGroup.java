@@ -26,6 +26,10 @@ public class ModItemGroup {
                     entries.add(ModItem.DIVING_LEGGINGS);
                     entries.add(ModItem.DIVING_BOOTS);
                     entries.add(ModItem.TANK);
+                    entries.add(ModItem.DIVING_UPGRADE);
+                    entries.add(ModBlock.UPGRADER);
+                    entries.add(ModItem.NIGHT_VISION_DIVING_UPGRADE);
+                    entries.add(ModItem.WATER_BREATHING__DIVING_UPGRADE);
                 }).build());
     }
 }

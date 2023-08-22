@@ -1,0 +1,15 @@
+{
+  "name": "Upgrader",
+  "icon": "aurus:upgrader",
+  "category": "aurus:recipes",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "For now, no craftings made with the Upgrader will be displayed in this book!"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "aurus:upgrader_recipe"
+    }
+  ]
+}

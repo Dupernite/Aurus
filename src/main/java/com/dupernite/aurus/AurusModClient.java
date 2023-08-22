@@ -1,13 +1,16 @@
 package com.dupernite.aurus;
 
-import com.dupernite.aurus.entity.SpearModel;
-import com.dupernite.aurus.entity.layer.ModModelLayers;
+import com.dupernite.aurus.screen.ModScreenHandlers;
+import com.dupernite.aurus.screen.UpgraderScreen;
+import com.dupernite.aurus.util.ModModelPredicateProvider;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
+import net.minecraft.client.gui.screen.ingame.HandledScreens;
 
 public class AurusModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        EntityModelLayerRegistry.registerModelLayer(ModModelLayers.SPEAR, SpearModel::getTexturedModelData);
+        ModModelPredicateProvider.registerModModels();
+
+        HandledScreens.register(ModScreenHandlers.UPGRADER_SCREEN_HANDLER, UpgraderScreen::new);
     }
 }

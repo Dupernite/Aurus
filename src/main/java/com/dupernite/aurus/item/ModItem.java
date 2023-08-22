@@ -21,7 +21,7 @@ public class ModItem {
     public static final Item QUARTZ_FRAGMENT = registerItem("quartz_fragment", new Item(new FabricItemSettings()));
 
     //Weapon
-    public static final Item SPEAR = registerItem("spear", new ModSpearItem(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE).maxDamage(10)));
+    public static final Item SPEAR = registerItem("spear", new TridentItem(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE).maxDamage(2000)));
 
     //Armor
     public static final Item NETHERITE_HORSE_ARMOR = registerItem("netherite_horse_armor", new HorseArmorItem(14, "netherite", new FabricItemSettings().rarity(Rarity.EPIC)));
@@ -33,6 +33,9 @@ public class ModItem {
     //Others
     public static final Item COIN = registerItem("coin", new Item(new FabricItemSettings().maxCount(128)));
     public static final Item TANK = registerItem("tank", new Item(new FabricItemSettings().maxCount(8)));
+    public static final Item DIVING_UPGRADE = registerItem("diving_upgrade", new Item(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
+    public static final Item NIGHT_VISION_DIVING_UPGRADE = registerItem("night_vision_diving_upgrade", new Item(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
+    public static final Item WATER_BREATHING__DIVING_UPGRADE = registerItem("water_breathing_diving_upgrade", new Item(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
 
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, new Identifier(AurusMod.MOD_ID, name), item);

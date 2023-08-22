@@ -18,6 +18,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlock.OVERWORLD_QUARTZ_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlock.DEEPSLATE_OVERWORLD_QUARTZ_ORE);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlock.UPGRADER);
     }
 
     @Override
