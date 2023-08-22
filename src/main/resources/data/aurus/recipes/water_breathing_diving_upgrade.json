@@ -1,0 +1,24 @@
+{
+  "type": "aurus:upgrader",
+  "ingredients": [
+    {
+      "item": "aurus:diving_upgrade"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:quartz"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "aurus:water_breathing_diving_upgrade"
+  }
+}

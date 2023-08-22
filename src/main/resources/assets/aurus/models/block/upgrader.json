@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "aurus:block/dark_oak_planks",
+    "east": "aurus:block/upgrader_side",
+    "north": "aurus:block/upgrader_front",
+    "particle": "aurus:block/upgrader_front",
+    "south": "aurus:block/upgrader_side",
+    "up": "aurus:block/upgrader_top",
+    "west": "aurus:block/upgrader_front"
+  }
+}

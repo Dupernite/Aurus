@@ -1,0 +1,20 @@
+{
+  "item.aurus.quartz_fragment": "Quartz Fragment",
+  "item.aurus.spear":  "Spear",
+  "item.aurus.crystalized_soup":  "Crystalized Beetroot Soup",
+  "itemgroup.aurustab": "Aurus",
+  "block.aurus.overworld_quartz_ore": "Quartz Ore",
+  "block.aurus.deepslate_overworld_quartz_ore": "Deepslate Quartz Ore",
+  "block.aurus.upgrader": "Upgrader",
+  "entity.aurus.spear_entity": "Spear",
+  "item.aurus.netherite_horse_armor": "Netherite Horse Armor",
+  "item.aurus.coin": "Coin",
+  "item.aurus.diving_helmet": "Diving Helmet",
+  "item.aurus.diving_chestplate": "Diving Chestplate",
+  "item.aurus.diving_leggings": "Diving Leggings",
+  "item.aurus.diving_boots": "Diving Boots",
+  "item.aurus.tank": "Tank",
+  "item.aurus.diving_upgrade": "Diving Upgrade",
+  "item.aurus.night_vision_diving_upgrade": "Night Vision Diving Upgrade",
+  "item.aurus.water_breathing_diving_upgrade": "Water Breathing Diving Upgrade"
+}

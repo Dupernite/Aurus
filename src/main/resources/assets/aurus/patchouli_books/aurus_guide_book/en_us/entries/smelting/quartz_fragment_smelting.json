@@ -1,0 +1,17 @@
+{
+  "name": "Quartz Fragment",
+  "icon": "aurus:quartz_fragment",
+  "category": "aurus:furnace",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "You can smelt the Quartz Ores to turn them into Quartz Fragments!"
+    },
+    {
+      "type": "patchouli:smelting",
+      "recipe2": "aurus:quartz_fragment_from_smelting_deepslate_overworld_quartz_ore",
+      "recipe": "aurus:quartz_fragment_from_smelting_overworld_quartz_ore",
+      "text": "You can use the Blast Furnace to smelt the ores faster"
+    }
+  ]
+}

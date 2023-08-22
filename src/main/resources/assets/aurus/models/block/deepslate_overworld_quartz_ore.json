@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "aurus:block/deepslate_overworld_quartz_ore"
+  }
+}

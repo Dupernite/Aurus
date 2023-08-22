@@ -1,0 +1,15 @@
+{
+  "type": "patchouli:shapeless_book_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:book"
+    },
+    {
+      "item": "aurus:quartz_fragment"
+    },
+    {
+      "item": "aurus:quartz_fragment"
+    }
+  ],
+  "book": "aurus:aurus_guide_book"
+}

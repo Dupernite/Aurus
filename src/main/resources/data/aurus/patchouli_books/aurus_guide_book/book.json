@@ -1,0 +1,8 @@
+{
+  "name": "Aurus Guide Book",
+  "landing_text": "Welcome to Aurus: Novae Terrae$(br2)This Book is incomplete and $(bold)WILL CHANGE",
+  "version": 1,
+  "creative_tab": "aurus:aurustab",
+  "use_resource_pack": true,
+  "model": "aurus:aurus_guide_book"
+}

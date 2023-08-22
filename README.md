@@ -14,12 +14,13 @@
 ⚠️ we plan to start full development before **September**!
 
 * New Structures in all Dimensions - **0% Complete** 
-* Small QOL changes to the game - **5% Complete** 
+* Small QOL changes to the game - **7% Complete** 
 * Add new Armor Trims - **0% Complete** 
 * New Biomes - **0% Complete** 
 * Rework Minecraft Biomes ( Examples but not confirmed: Birch Forest, Jungle, Deserts) - **0% Complete** 
-* New Equipments - **0% Complete** 
+* New Equipments - **2% Complete** 
 * New Underwater Boss - **0% Complete** 
+* Documentation - **4% Complete** 
 
 # FAQ
 **Will this mod support older versions?**  

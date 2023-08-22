@@ -1,0 +1,16 @@
+{
+  "name": "Quartz Fragment",
+  "icon": "minecraft:quartz",
+  "category": "aurus:recipes",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "You can convert Quartz to Quartz Fragment and vice-versa!"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "aurus:quartz_to_quartz_fragment",
+      "recipe2": "aurus:quartz"
+    }
+  ]
+}

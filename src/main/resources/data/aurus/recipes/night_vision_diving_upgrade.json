@@ -1,0 +1,24 @@
+{
+  "type": "aurus:upgrader",
+  "ingredients": [
+    {
+      "item": "aurus:diving_upgrade"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "item": "minecraft:quartz"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "aurus:night_vision_diving_upgrade"
+  }
+}
