@@ -1,0 +1,48 @@
+{
+  "name": "Upgrades",
+  "icon": "aurus:diving_upgrade",
+  "category": "aurus:recipes",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The Diving Upgrade is a crafting item used to craft Upgrades for your Diving Suit!"
+    },
+    {
+      "type": "aurus:upgrader_template",
+      "output_slot": "aurus:diving_upgrade",
+      "input_slot_recipe": "minecraft:copper_ingot",
+      "input_slot_1": "minecraft:iron_ingot",
+      "input_slot_2": "minecraft:green_dye",
+      "input_slot_3": "minecraft:gold_ingot",
+      "input_slot_4": "aurus:quartz_fragment"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Night Vision Upgrade",
+      "text": "Night Vision Diving Upgrade is an Upgrade for you Diving Suit, can be applied on the helmet and gives you Night Vision!"
+    },
+    {
+      "type": "aurus:upgrader_template",
+      "output_slot": "aurus:night_vision_diving_upgrade",
+      "input_slot_recipe": "aurus:diving_upgrade",
+      "input_slot_1": "minecraft:ender_pearl",
+      "input_slot_2": "minecraft:blaze_powder",
+      "input_slot_3": "minecraft:quartz",
+      "input_slot_4": "minecraft:copper_ingot"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Water Breathing Upgrade",
+      "text": "Water Breathing Upgrade is an Upgrade for you Diving Suit, can be applied on the helmet and gives you Water Breathing!"
+    },
+    {
+      "type": "aurus:upgrader_template",
+      "output_slot": "aurus:water_breathing_diving_upgrade",
+      "input_slot_recipe": "aurus:diving_upgrade",
+      "input_slot_1": "minecraft:glass_bottle",
+      "input_slot_2": "minecraft:iron_ingot",
+      "input_slot_3": "minecraft:quartz",
+      "input_slot_4": "minecraft:copper_ingot"
+    }
+  ]
+}

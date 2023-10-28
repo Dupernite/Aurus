@@ -50,6 +50,18 @@ public class UpgraderCategory implements DisplayCategory<BasicDisplay> {
         widgets.add(Widgets.createSlot(new Point(startPoint.x + 80, startPoint.y + 11))
                 .entries(display.getInputEntries().get(0)));
 
+        widgets.add(Widgets.createSlot(new Point(startPoint.x + 26, startPoint.y + 14))
+                .entries(display.getInputEntries().get(1)));
+
+        widgets.add(Widgets.createSlot(new Point(startPoint.x + 26, startPoint.y + 57))
+                .entries(display.getInputEntries().get(2)));
+
+        widgets.add(Widgets.createSlot(new Point(startPoint.x + 134, startPoint.y + 14))
+                .entries(display.getInputEntries().get(3)));
+
+        widgets.add(Widgets.createSlot(new Point(startPoint.x + 134, startPoint.y + 57))
+                .entries(display.getInputEntries().get(4)));
+
         widgets.add(Widgets.createSlot(new Point(startPoint.x + 80, startPoint.y + 59))
                 .markOutput().entries(display.getOutputEntries().get(0)));
 

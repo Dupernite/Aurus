@@ -24,6 +24,10 @@ public class UpgraderDisplay extends BasicDisplay {
         if(recipe == null) return Collections.emptyList();
         List<EntryIngredient> list = new ArrayList<>();
         list.add(EntryIngredients.ofIngredient(recipe.getIngredients().get(0)));
+        list.add(EntryIngredients.ofIngredient(recipe.getIngredients().get(1)));
+        list.add(EntryIngredients.ofIngredient(recipe.getIngredients().get(2)));
+        list.add(EntryIngredients.ofIngredient(recipe.getIngredients().get(3)));
+        list.add(EntryIngredients.ofIngredient(recipe.getIngredients().get(4)));
         return list;
     }
 

@@ -5,7 +5,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "For now, no craftings made with the Upgrader will be displayed in this book!"
+      "text": "The Upgrader can be used to craft Upgrades for your diving suit!"
     },
     {
       "type": "patchouli:crafting",
