@@ -3,6 +3,7 @@ package com.dupernite.aurus.item;
 import com.dupernite.aurus.AurusMod;
 import com.dupernite.aurus.item.Spear.ModSpearItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -36,7 +37,6 @@ public class ModItem {
     public static final Item DIVING_UPGRADE = registerItem("diving_upgrade", new Item(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
     public static final Item NIGHT_VISION_DIVING_UPGRADE = registerItem("night_vision_diving_upgrade", new Item(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
     public static final Item WATER_BREATHING__DIVING_UPGRADE = registerItem("water_breathing_diving_upgrade", new Item(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
-
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, new Identifier(AurusMod.MOD_ID, name), item);
     }

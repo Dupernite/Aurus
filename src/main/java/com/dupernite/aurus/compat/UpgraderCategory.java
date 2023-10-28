@@ -17,20 +17,22 @@ import net.minecraft.util.Identifier;
 import java.util.LinkedList;
 import java.util.List;
 
+// Done with the help:
+// https://github.com/TeamGalacticraft/Galacticraft/tree/main (MIT License)
 public class UpgraderCategory implements DisplayCategory<BasicDisplay> {
     public static final Identifier TEXTURE =
-            new Identifier(AurusMod.MOD_ID, "textures/gui/gem_empowering_station_gui.png");
-    public static final CategoryIdentifier<UpgraderDisplay> UPGRADER_DISPLAY =
-            CategoryIdentifier.of(AurusMod.MOD_ID, "upgrader_display");
+            new Identifier(AurusMod.MOD_ID, "textures/gui/upgrader_gui.png");
+    public static final CategoryIdentifier<UpgraderDisplay> UPGRADING =
+            CategoryIdentifier.of(AurusMod.MOD_ID, "upgrading");
 
     @Override
     public CategoryIdentifier<? extends BasicDisplay> getCategoryIdentifier() {
-        return UPGRADER_DISPLAY;
+        return UPGRADING;
     }
 
     @Override
     public Text getTitle() {
-        return Text.literal("Gem Empowering Station");
+        return Text.literal("Upgrader");
     }
 
     @Override
@@ -42,27 +44,14 @@ public class UpgraderCategory implements DisplayCategory<BasicDisplay> {
     public List<Widget> setupDisplay(BasicDisplay display, Rectangle bounds) {
         Point startPoint = new Point(bounds.getCenterX() - 87, bounds.getCenterY() - 35);
         List<Widget> widgets = new LinkedList<>();
-
         widgets.add(Widgets.createTexturedWidget(TEXTURE,
                 new Rectangle(startPoint.x, startPoint.y, 175, 82)));
 
         widgets.add(Widgets.createSlot(new Point(startPoint.x + 80, startPoint.y + 11))
-                .entries(display.getInputEntries().get(0))); //Input
+                .entries(display.getInputEntries().get(0)));
 
         widgets.add(Widgets.createSlot(new Point(startPoint.x + 80, startPoint.y + 59))
-                .markOutput().entries(display.getOutputEntries().get(0))); //Output
-
-        widgets.add(Widgets.createSlot(new Point(startPoint.x + 26, startPoint.y + 14))
-                .entries(display.getInputEntries().get(1))); //Slot1
-
-        widgets.add(Widgets.createSlot(new Point(startPoint.x + 26, startPoint.y + 57))
-                .entries(display.getInputEntries().get(2))); //Slot2
-
-        widgets.add(Widgets.createSlot(new Point(startPoint.x + 134, startPoint.y + 14))
-                .entries(display.getInputEntries().get(3))); //Slot3
-
-        widgets.add(Widgets.createSlot(new Point(startPoint.x + 134, startPoint.y + 57))
-                .entries(display.getInputEntries().get(4))); //Slot4
+                .markOutput().entries(display.getOutputEntries().get(0)));
 
         return widgets;
     }

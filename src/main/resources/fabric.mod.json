@@ -21,8 +21,8 @@
     "fabric-datagen": [
       "com.dupernite.aurus.AurusModDataGenerator"
     ],
-    "REI_client": [
-      "com.dupernite.aurus.compat.AurusREIClientPlugin"
+    "rei_client": [
+      "com.dupernite.aurus.compat.AurusModREIClientPlugin"
     ]
   },
   "mixins": [
