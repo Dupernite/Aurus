@@ -30,6 +30,9 @@ public class ModItemGroup {
                     entries.add(ModBlock.UPGRADER);
                     entries.add(ModItem.NIGHT_VISION_DIVING_UPGRADE);
                     entries.add(ModItem.WATER_BREATHING__DIVING_UPGRADE);
+                    entries.add(ModBlock.RELIC1);
+                    entries.add(ModBlock.RELIC2);
+                    entries.add(ModBlock.PEDESTAL);
                 }).build());
     }
 }

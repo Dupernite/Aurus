@@ -21,7 +21,7 @@ But remember, we are still in **early stages of developments** so it can change 
 * Rework Minecraft Biomes ( Examples but not confirmed: Birch Forest, Jungle, Deserts) - **0% Complete** 
 * New Equipments - **2% Complete** 
 * New Underwater Boss - **0% Complete** 
-* Documentation - **4% Complete**
+* Documentation - **6% Complete**
 
 # FAQ
 **Will this mod support older versions?**  

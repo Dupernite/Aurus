@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "aurus:block/trophy"
+    },
+    "facing=east": {
+      "model": "aurus:block/trophy",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "aurus:block/trophy",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "aurus:block/trophy",
+      "y": 270
+    }
+  }
+}

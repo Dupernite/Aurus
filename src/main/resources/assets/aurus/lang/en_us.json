@@ -16,5 +16,8 @@
   "item.aurus.tank": "Tank",
   "item.aurus.diving_upgrade": "Diving Upgrade",
   "item.aurus.night_vision_diving_upgrade": "Night Vision Diving Upgrade",
-  "item.aurus.water_breathing_diving_upgrade": "Water Breathing Diving Upgrade"
+  "item.aurus.water_breathing_diving_upgrade": "Water Breathing Diving Upgrade",
+  "block.aurus.trophy": "Trophy",
+  "block.aurus.pot": "Pot",
+  "block.aurus.pedestal": "Pedestal"
 }

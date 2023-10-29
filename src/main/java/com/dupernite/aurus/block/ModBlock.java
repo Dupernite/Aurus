@@ -1,6 +1,9 @@
 package com.dupernite.aurus.block;
 
 import com.dupernite.aurus.AurusMod;
+import com.dupernite.aurus.block.custom.PedestalBlock;
+import com.dupernite.aurus.block.custom.PotBlock;
+import com.dupernite.aurus.block.custom.TrophyBlock;
 import com.dupernite.aurus.block.custom.UpgraderBlock;
 import com.dupernite.aurus.block.entity.UpgraderBlockEntity;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -45,6 +48,15 @@ public class ModBlock {
             new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE).strength(6.0f).requiresTool(),
                     UniformIntProvider.create(2, 6)));
     public static final Block UPGRADER = registerBlock("upgrader",
-            new UpgraderBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE).nonOpaque()));
+            new UpgraderBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+
+    public static final Block RELIC1 = registerBlock("trophy",
+            new TrophyBlock(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).nonOpaque()));
+
+    public static final Block RELIC2 = registerBlock("pot",
+            new PotBlock(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).nonOpaque()));
+
+    public static final Block PEDESTAL = registerBlock("pedestal",
+            new PedestalBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
 
 }

@@ -1,6 +1,7 @@
 package com.dupernite.aurus.screen;
 
 import com.dupernite.aurus.block.entity.UpgraderBlockEntity;
+import com.dupernite.aurus.custom.OutputSlot;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -33,7 +34,7 @@ public class UpgraderScreenHandler extends ScreenHandler {
         this.blockEntity = ((UpgraderBlockEntity) blockEntity);
 
         this.addSlot(new Slot(inventory, 0, 80, 11)); //Input
-        this.addSlot(new Slot(inventory, 1, 80, 59)); //Output
+        this.addSlot(new OutputSlot(inventory, 1, 80, 59)); //Output
         this.addSlot(new Slot(inventory, 2, 26, 14)); //Upgrade 1
         this.addSlot(new Slot(inventory, 3, 26, 57)); //Upgrade 2
         this.addSlot(new Slot(inventory, 4, 134, 14)); //Upgrade 3
