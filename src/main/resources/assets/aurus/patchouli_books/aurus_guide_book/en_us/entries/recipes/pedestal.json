@@ -1,0 +1,15 @@
+{
+  "name": "Pedestal",
+  "icon": "aurus:pedestal",
+  "category": "aurus:recipes",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "You can use the pedestal to show off your fidings!"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "aurus:pedestal"
+    }
+  ]
+}

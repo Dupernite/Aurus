@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " S ",
-    " B ",
-    "SSS"
+    "SSS",
+    "B B",
+    "BBB"
   ],
   "key": {
     "S": {
-      "item": "minecraft:stone_brick_slab"
+      "item": "minecraft:stone_slab"
     },
     "B": {
       "item": "minecraft:stone_bricks"

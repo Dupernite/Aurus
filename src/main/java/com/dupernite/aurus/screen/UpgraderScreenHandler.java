@@ -1,7 +1,7 @@
 package com.dupernite.aurus.screen;
 
 import com.dupernite.aurus.block.entity.UpgraderBlockEntity;
-import com.dupernite.aurus.custom.OutputSlot;
+import com.dupernite.aurus.screen.custom.OutputSlot;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -12,8 +12,6 @@ import net.minecraft.screen.ArrayPropertyDelegate;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
-
-import static com.dupernite.aurus.block.entity.UpgraderBlockEntity.*;
 
 public class UpgraderScreenHandler extends ScreenHandler {
     private final Inventory inventory;

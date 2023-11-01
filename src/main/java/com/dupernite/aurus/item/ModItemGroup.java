@@ -5,6 +5,7 @@ import com.dupernite.aurus.block.ModBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.MusicDiscItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -33,6 +34,7 @@ public class ModItemGroup {
                     entries.add(ModBlock.RELIC1);
                     entries.add(ModBlock.RELIC2);
                     entries.add(ModBlock.PEDESTAL);
+                    entries.add(ModItem.QUARTZUM_ALLOY);
                 }).build());
     }
 }
