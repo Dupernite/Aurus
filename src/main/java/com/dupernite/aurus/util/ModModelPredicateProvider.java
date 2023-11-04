@@ -6,12 +6,6 @@ import net.minecraft.util.Identifier;
 
 public class ModModelPredicateProvider {
     public static void registerModModels(){
-        registerSpear();
-    }
 
-    private static void registerSpear() {
-        ModelPredicateProviderRegistry.register(ModItem.SPEAR, new Identifier("throwing"), (stack, world, entity, seed) -> {
-            return entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F;
-        });
     }
 }

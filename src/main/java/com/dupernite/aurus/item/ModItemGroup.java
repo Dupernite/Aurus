@@ -35,6 +35,7 @@ public class ModItemGroup {
                     entries.add(ModBlock.RELIC2);
                     entries.add(ModBlock.PEDESTAL);
                     entries.add(ModItem.QUARTZUM_ALLOY);
+                    entries.add(ModItem.JELLYFISH_SPAWN_EGG);
                 }).build());
     }
 }

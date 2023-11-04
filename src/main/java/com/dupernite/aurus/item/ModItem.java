@@ -1,10 +1,9 @@
 package com.dupernite.aurus.item;
 
 import com.dupernite.aurus.AurusMod;
-import com.dupernite.aurus.item.Spear.ModSpearItem;
+import com.dupernite.aurus.entity.ModEntity;
 import com.dupernite.aurus.item.custom.BowlItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -23,9 +22,6 @@ public class ModItem {
     public static final Item QUARTZ_FRAGMENT = registerItem("quartz_fragment", new Item(new FabricItemSettings()));
     public static final Item QUARTZUM_ALLOY = registerItem("quartzum_alloy", new Item(new FabricItemSettings()));
 
-    //Weapon
-    public static final Item SPEAR = registerItem("spear", new TridentItem(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE).maxDamage(2000)));
-
     //Armor
     public static final Item NETHERITE_HORSE_ARMOR = registerItem("netherite_horse_armor", new HorseArmorItem(14, "netherite", new FabricItemSettings().rarity(Rarity.EPIC)));
     public static final Item DIVING_HELMET = registerItem("diving_helmet", new DivingArmorEffect(ModArmorMaterial.DIVING, ArmorItem.Type.HELMET, new FabricItemSettings().rarity(Rarity.RARE)));
@@ -40,8 +36,7 @@ public class ModItem {
     public static final Item DIVING_UPGRADE = registerItem("diving_upgrade", new Item(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
     public static final Item NIGHT_VISION_DIVING_UPGRADE = registerItem("night_vision_diving_upgrade", new Item(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
     public static final Item WATER_BREATHING__DIVING_UPGRADE = registerItem("water_breathing_diving_upgrade", new Item(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
-
-
+    public static final Item JELLYFISH_SPAWN_EGG = registerItem("jellyfish_spawn_egg", new SpawnEggItem(ModEntity.JELLYFISH, 0x5BBCF4, 0x7BD4FF, new FabricItemSettings()));
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, new Identifier(AurusMod.MOD_ID, name), item);
     }

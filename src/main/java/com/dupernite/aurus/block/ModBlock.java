@@ -59,4 +59,7 @@ public class ModBlock {
     public static final Block PEDESTAL = registerBlock("pedestal",
             new PedestalBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
 
+    public static final Block MINE = registerBlock("mine",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+
 }
