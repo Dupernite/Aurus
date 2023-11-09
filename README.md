@@ -15,13 +15,13 @@ But remember, we are still in **early stages of developments** so it can change 
 # Ideas and Development Progress
 
 * New Structures in all Dimensions - **0% Complete** 
-* Small QOL changes to the game - **7% Complete** 
+* Small QOL changes to the game - **10% Complete** 
 * Add new Armor Trims - **0% Complete** 
 * New Biomes - **0% Complete** 
 * Rework Minecraft Biomes ( Examples but not confirmed: Birch Forest, Jungle, Deserts) - **0% Complete** 
-* New Equipments - **2% Complete** 
+* New Equipments - **7% Complete** 
 * New Underwater Boss - **0% Complete** 
-* Documentation - **6% Complete**
+* Documentation - **8% Complete**
 
 # FAQ
 **Will this mod support older versions?**  
@@ -37,7 +37,7 @@ But remember, we are still in **early stages of developments** so it can change 
 * We can't guarantee that it will work with other mods because we are still in the early stages of development. However, our plan is to make it **compatible** with most mods.
 
 **What are the required mods?**  
-* We still don't know which mods will be required. The only mod that we know will be required is **Fabric API**.
+* We still don't know which mods will be required. The only mods that we know will be required are **Fabric API** and **GeckoLib**.
 
 **Why is it taking so long?**
 * We are a small team of developers, and our idea of this mod is really big
