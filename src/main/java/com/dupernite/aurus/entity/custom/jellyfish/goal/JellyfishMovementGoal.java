@@ -5,7 +5,6 @@ package com.dupernite.aurus.entity.custom.jellyfish.goal;
 import com.dupernite.aurus.entity.ModEntity;
 import com.dupernite.aurus.entity.custom.jellyfish.JellyfishEntity;
 import com.dupernite.aurus.entity.custom.jellyfish.JellyfishEntityRenderer;
-import com.dupernite.aurus.entity.custom.jellyfish.JellyfishModel;
 import net.minecraft.entity.ai.goal.Goal;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;

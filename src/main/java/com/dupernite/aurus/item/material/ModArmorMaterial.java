@@ -1,4 +1,4 @@
-package com.dupernite.aurus.item;
+package com.dupernite.aurus.item.material;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.item.*;

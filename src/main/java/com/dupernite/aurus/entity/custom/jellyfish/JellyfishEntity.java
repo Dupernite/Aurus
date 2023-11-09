@@ -22,9 +22,19 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
+import software.bernie.geckolib.animatable.GeoEntity;
+import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.core.animation.AnimationController;
+import software.bernie.geckolib.core.animation.AnimationState;
+import software.bernie.geckolib.core.animation.RawAnimation;
+import software.bernie.geckolib.core.object.PlayState;
+import software.bernie.geckolib.util.GeckoLibUtil;
 
 
-public class JellyfishEntity extends FishEntity {
+public class JellyfishEntity extends FishEntity implements GeoEntity {
+    protected static final RawAnimation IDLE_ANM = RawAnimation.begin().thenLoop("animation.jellyfish.idle");
+    private final AnimatableInstanceCache geoCache = GeckoLibUtil.createInstanceCache(this);
 
     public JellyfishEntity(EntityType<? extends FishEntity> entityType, World world) {
         super(entityType, world);
@@ -50,5 +60,22 @@ public class JellyfishEntity extends FishEntity {
         return MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 2)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3);
+    }
+
+    @Override
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
+        controllers.add(new AnimationController<>(this, "Idling", 5, this::idleAnimController));
+    }
+
+    protected <E extends JellyfishEntity> PlayState idleAnimController(final AnimationState<E> event) {
+        if (!event.isMoving()) {
+            return event.setAndContinue(IDLE_ANM);
+        }
+        return PlayState.STOP;
+    }
+
+    @Override
+    public AnimatableInstanceCache getAnimatableInstanceCache() {
+        return this.geoCache;
     }
 }

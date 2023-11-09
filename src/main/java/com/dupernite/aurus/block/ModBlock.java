@@ -1,10 +1,7 @@
 package com.dupernite.aurus.block;
 
 import com.dupernite.aurus.AurusMod;
-import com.dupernite.aurus.block.custom.PedestalBlock;
-import com.dupernite.aurus.block.custom.PotBlock;
-import com.dupernite.aurus.block.custom.TrophyBlock;
-import com.dupernite.aurus.block.custom.UpgraderBlock;
+import com.dupernite.aurus.block.custom.*;
 import com.dupernite.aurus.block.entity.UpgraderBlockEntity;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -18,6 +15,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
+import software.bernie.geckolib.GeckoLib;
 
 
 public class ModBlock {
@@ -31,6 +29,10 @@ public class ModBlock {
     }
     private static Block registerBlock(String name, Block block) {
         registerItemBlock(name, block);
+        return Registry.register(Registries.BLOCK, new Identifier(AurusMod.MOD_ID, name), block);
+    }
+
+    public static <B extends Block> B registerGeoBlock(String name, B block) {
         return Registry.register(Registries.BLOCK, new Identifier(AurusMod.MOD_ID, name), block);
     }
 
@@ -59,7 +61,6 @@ public class ModBlock {
     public static final Block PEDESTAL = registerBlock("pedestal",
             new PedestalBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
 
-    public static final Block MINE = registerBlock("mine",
-            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    //public static final MineBlock MINE = registerGeoBlock("mine", new MineBlock());
 
 }
