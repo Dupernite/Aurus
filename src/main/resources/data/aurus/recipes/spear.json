@@ -1,0 +1,24 @@
+{
+  "type": "aurus:upgrader",
+  "ingredients": [
+    {
+      "item": "minecraft:stick"
+    },
+    {
+      "item": "aurus:quartz_fragment"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "aurus:spear"
+  }
+}
