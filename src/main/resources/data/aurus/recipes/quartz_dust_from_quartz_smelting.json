@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:quartz"
+  },
+  "result": "aurus:quartz_dust",
+  "experience": 0.2,
+  "cookingtime": 200
+}

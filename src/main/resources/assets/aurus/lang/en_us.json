@@ -1,12 +1,16 @@
 {
   "itemgroup.aurustab": "Aurus",
+
   "block.aurus.overworld_quartz_ore": "Quartz Ore",
   "block.aurus.deepslate_overworld_quartz_ore": "Deepslate Quartz Ore",
-  "block.aurus.upgrader": "Upgrader",
+  "block.aurus.upgrader": "Upgrading Bench",
   "block.aurus.trophy": "Trophy",
   "block.aurus.pot": "Pot",
   "block.aurus.pedestal": "Pedestal",
+
   "entity.aurus.spear_entity": "Spear",
+  "entity.aurus.jellyfish": "Jellyfish",
+
   "item.aurus.netherite_horse_armor": "Netherite Horse Armor",
   "item.aurus.coin": "Coin",
   "item.aurus.diving_helmet": "Diving Helmet",
@@ -21,5 +25,6 @@
   "item.aurus.spear":  "Spear",
   "item.aurus.crystalized_soup":  "Crystalized Beetroot Soup",
   "item.aurus.quartzum_alloy": "Quartzum Alloy",
-  "item.aurus.jellyfish_spawn_egg": "Jellyfish Spawn Egg"
+  "item.aurus.jellyfish_spawn_egg": "Jellyfish Spawn Egg",
+  "item.aurus.quartz_dust": "Quartz Dust"
 }

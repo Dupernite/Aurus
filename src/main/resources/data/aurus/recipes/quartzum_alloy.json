@@ -5,16 +5,16 @@
       "item": "minecraft:iron_ingot"
     },
     {
-      "item": "minecraft:quartz"
+      "item": "aurus:quartz_dust"
     },
     {
       "item": "minecraft:blaze_powder"
     },
     {
-      "item": "minecraft:ender_pearl"
+      "item": "minecraft:netherite_scrap"
     },
     {
-      "item": "minecraft:netherite_ingot"
+      "item": "minecraft:netherite_scrap"
     }
   ],
   "output": {

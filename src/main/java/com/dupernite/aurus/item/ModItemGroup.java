@@ -27,14 +27,15 @@ public class ModItemGroup {
                     entries.add(ModItem.DIVING_LEGGINGS);
                     entries.add(ModItem.DIVING_BOOTS);
                     entries.add(ModItem.TANK);
-                    entries.add(ModItem.DIVING_UPGRADE);
                     entries.add(ModBlock.UPGRADER);
+                    entries.add(ModItem.DIVING_UPGRADE);
                     entries.add(ModItem.NIGHT_VISION_DIVING_UPGRADE);
                     entries.add(ModItem.WATER_BREATHING__DIVING_UPGRADE);
                     entries.add(ModBlock.RELIC1);
                     entries.add(ModBlock.RELIC2);
                     entries.add(ModBlock.PEDESTAL);
                     entries.add(ModItem.QUARTZUM_ALLOY);
+                    entries.add(ModItem.QUARTZ_DUST);
                     entries.add(ModItem.JELLYFISH_SPAWN_EGG);
                 }).build());
     }
