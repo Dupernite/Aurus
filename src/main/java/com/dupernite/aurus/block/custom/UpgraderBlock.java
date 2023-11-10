@@ -89,6 +89,6 @@ public class UpgraderBlock extends BlockWithEntity implements BlockEntityProvide
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return checkType(type, ModBlockEntity.UPGRADER_BE, (world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1));
+        return validateTicker(type, ModBlockEntity.UPGRADER_BE, (world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1));
     }
 }

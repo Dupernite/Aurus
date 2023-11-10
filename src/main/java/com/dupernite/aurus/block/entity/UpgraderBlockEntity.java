@@ -2,7 +2,6 @@ package com.dupernite.aurus.block.entity;
 
 import com.dupernite.aurus.recipe.UpgraderRecipe;
 import com.dupernite.aurus.screen.UpgraderScreenHandler;
-import com.dupernite.aurus.item.ModItem;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -11,9 +10,9 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
+import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -119,15 +118,15 @@ public class UpgraderBlockEntity extends BlockEntity implements ExtendedScreenHa
     }
 
     private void CraftItem() {
-        Optional<UpgraderRecipe> recipe = getCurrentRecipe();
+        Optional<RecipeEntry<UpgraderRecipe>> recipe = getCurrentRecipe();
 
         this.removeStack(INPUT_SLOT, 1);
         if(!this.getStack(UPGRADE_1_SLOT).isEmpty()) { this.removeStack(UPGRADE_1_SLOT, 1); }
         if(!this.getStack(UPGRADE_2_SLOT).isEmpty()) { this.removeStack(UPGRADE_2_SLOT, 1); }
         if(!this.getStack(UPGRADE_3_SLOT).isEmpty()) { this.removeStack(UPGRADE_3_SLOT, 1); }
         if(!this.getStack(UPGRADE_4_SLOT).isEmpty()) { this.removeStack(UPGRADE_4_SLOT, 1); }
-        this.setStack(OUTPUT_SLOT, new ItemStack(recipe.get().getOutput(null).getItem(),
-                this.getStack(OUTPUT_SLOT).getCount() + recipe.get().getOutput(null).getCount()));
+        this.setStack(OUTPUT_SLOT, new ItemStack(recipe.get().value().getResult(null).getItem(),
+                this.getStack(OUTPUT_SLOT).getCount() + recipe.get().value().getResult(null).getCount()));
     }
 
     private boolean hasCraftingFinished() {
@@ -139,12 +138,12 @@ public class UpgraderBlockEntity extends BlockEntity implements ExtendedScreenHa
     }
 
     private boolean hasRecipe() {
-        Optional<UpgraderRecipe> recipe = getCurrentRecipe();
+        Optional<RecipeEntry<UpgraderRecipe>> recipe = getCurrentRecipe();
 
         if (recipe.isEmpty()) {
             return false;
         }
-        ItemStack output = recipe.get().getOutput(null);
+        ItemStack output = recipe.get().value().getResult(null);
 
         return canInsertAmountIntoOutputSlot(output.getCount())
                 && canInsertItemIntoOutputSlot(output);
@@ -158,7 +157,7 @@ public class UpgraderBlockEntity extends BlockEntity implements ExtendedScreenHa
         return this.getStack(OUTPUT_SLOT).getMaxCount() >= this.getStack(OUTPUT_SLOT).getCount() + count;
     }
 
-    private Optional<UpgraderRecipe> getCurrentRecipe() {
+    private Optional<RecipeEntry<UpgraderRecipe>> getCurrentRecipe() {
         SimpleInventory inventory = new SimpleInventory((this.size()));
         for (int i = 0; i < this.size(); i++) {
             inventory.setStack(i, this.getStack(i));

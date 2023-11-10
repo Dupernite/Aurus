@@ -1,25 +1,24 @@
 package com.dupernite.aurus.recipe;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.DataResult;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.inventory.SimpleInventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.*;
 import net.minecraft.registry.DynamicRegistryManager;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.JsonHelper;
 import net.minecraft.util.collection.DefaultedList;
+import net.minecraft.util.dynamic.Codecs;
 import net.minecraft.world.World;
 
-public class UpgraderRecipe implements Recipe<SimpleInventory> {
-    private final Identifier id;
-    private final ItemStack output;
-    private final DefaultedList<Ingredient> recipeItems;
+import java.util.List;
 
-    public UpgraderRecipe(Identifier id, ItemStack output, DefaultedList<Ingredient> recipeItems){
-        this.id = id;
+public class UpgraderRecipe implements Recipe<SimpleInventory> {
+    private final ItemStack output;
+    private final List<Ingredient> recipeItems;
+
+    public UpgraderRecipe(List<Ingredient> recipeItems, ItemStack output){
         this.output = output;
         this.recipeItems = recipeItems;
     }
@@ -47,13 +46,8 @@ public class UpgraderRecipe implements Recipe<SimpleInventory> {
     }
 
     @Override
-    public ItemStack getOutput(DynamicRegistryManager registryManager) {
+    public ItemStack getResult(DynamicRegistryManager registryManager) {
         return output.copy();
-    }
-
-    @Override
-    public Identifier getId() {
-        return this.id;
     }
 
     @Override
@@ -68,7 +62,9 @@ public class UpgraderRecipe implements Recipe<SimpleInventory> {
 
     @Override
     public DefaultedList<Ingredient> getIngredients() {
-        return this.recipeItems;
+        DefaultedList list = DefaultedList.ofSize(this.recipeItems.size());
+        list.addAll(recipeItems);
+        return list;
     }
 
     public static class Type implements RecipeType<UpgraderRecipe>{
@@ -80,22 +76,24 @@ public class UpgraderRecipe implements Recipe<SimpleInventory> {
         public static final Serializer INSTANCE = new Serializer();
         public static final String ID = "upgrader";
 
-        @Override
-        public UpgraderRecipe read(Identifier id, JsonObject json) {
-            ItemStack output = ShapedRecipe.outputFromJson(JsonHelper.getObject(json, "output"));
+        public static final Codec<UpgraderRecipe> CODEC = RecordCodecBuilder.create(in -> in.group(
+                validateAmount(Ingredient.DISALLOW_EMPTY_CODEC, 9).fieldOf("ingredients").forGetter(UpgraderRecipe::getIngredients),
+                RecipeCodecs.CRAFTING_RESULT.fieldOf("output").forGetter(r -> r.output)
+        ).apply(in, UpgraderRecipe::new));
 
-            JsonArray ingredients = JsonHelper.getArray(json, "ingredients");
-            DefaultedList<Ingredient> inputs = DefaultedList.ofSize(5, Ingredient.EMPTY);
-
-            for (int i = 0; i < inputs.size(); i++) {
-                inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
-            }
-
-            return new UpgraderRecipe(id, output, inputs);
+        private static Codec<List<Ingredient>> validateAmount(Codec<Ingredient> delegate, int max) {
+            return Codecs.validate(Codecs.validate(
+                    delegate.listOf(), list -> list.size() > max ? DataResult.error(() -> "Recipe has too many ingredients!") : DataResult.success(list)
+            ), list -> list.isEmpty() ? DataResult.error(() -> "Recipe has no ingredients!") : DataResult.success(list));
         }
 
         @Override
-        public UpgraderRecipe read(Identifier id, PacketByteBuf buf) {
+        public Codec<UpgraderRecipe> codec() {
+            return CODEC;
+        }
+
+        @Override
+        public UpgraderRecipe read(PacketByteBuf buf) {
             DefaultedList<Ingredient> inputs = DefaultedList.ofSize(buf.readInt(), Ingredient.EMPTY);
 
             for (int i = 0; i < inputs.size(); i++) {
@@ -103,7 +101,7 @@ public class UpgraderRecipe implements Recipe<SimpleInventory> {
             }
 
             ItemStack output = buf.readItemStack();
-            return new UpgraderRecipe(id, output, inputs);
+            return new UpgraderRecipe(inputs, output);
         }
 
         @Override
@@ -112,7 +110,7 @@ public class UpgraderRecipe implements Recipe<SimpleInventory> {
             for (Ingredient ing : recipe.getIngredients()) {
                 ing.write(buf);
             }
-            buf.writeItemStack(recipe.getOutput(null));
+            buf.writeItemStack(recipe.getResult(null));
         }
     }
 }

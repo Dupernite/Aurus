@@ -9,7 +9,6 @@ import me.shedaniel.rei.api.client.gui.widgets.Widget;
 import me.shedaniel.rei.api.client.gui.widgets.Widgets;
 import me.shedaniel.rei.api.client.registry.display.DisplayCategory;
 import me.shedaniel.rei.api.common.category.CategoryIdentifier;
-import me.shedaniel.rei.api.common.display.basic.BasicDisplay;
 import me.shedaniel.rei.api.common.util.EntryStacks;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
@@ -19,14 +18,14 @@ import java.util.List;
 
 // Done with the help:
 // https://github.com/TeamGalacticraft/Galacticraft/tree/main (MIT License)
-public class UpgraderCategory implements DisplayCategory<BasicDisplay> {
+public class UpgraderCategory implements DisplayCategory<UpgraderDisplay> {
     public static final Identifier TEXTURE =
             new Identifier(AurusMod.MOD_ID, "textures/gui/upgrader_gui.png");
     public static final CategoryIdentifier<UpgraderDisplay> UPGRADING =
             CategoryIdentifier.of(AurusMod.MOD_ID, "upgrading");
 
     @Override
-    public CategoryIdentifier<? extends BasicDisplay> getCategoryIdentifier() {
+    public CategoryIdentifier<? extends UpgraderDisplay> getCategoryIdentifier() {
         return UPGRADING;
     }
 
@@ -41,7 +40,7 @@ public class UpgraderCategory implements DisplayCategory<BasicDisplay> {
     }
 
     @Override
-    public List<Widget> setupDisplay(BasicDisplay display, Rectangle bounds) {
+    public List<Widget> setupDisplay(UpgraderDisplay display, Rectangle bounds) {
         Point startPoint = new Point(bounds.getCenterX() - 87, bounds.getCenterY() - 35);
         List<Widget> widgets = new LinkedList<>();
         widgets.add(Widgets.createTexturedWidget(TEXTURE,

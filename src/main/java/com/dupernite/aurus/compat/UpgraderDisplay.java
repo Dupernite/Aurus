@@ -6,6 +6,7 @@ import me.shedaniel.rei.api.common.display.basic.BasicDisplay;
 import me.shedaniel.rei.api.common.entry.EntryIngredient;
 import me.shedaniel.rei.api.common.util.EntryIngredients;
 import me.shedaniel.rei.api.common.util.EntryStacks;
+import net.minecraft.recipe.RecipeEntry;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -16,8 +17,8 @@ public class UpgraderDisplay extends BasicDisplay {
         super(inputs, outputs);
     }
 
-    public UpgraderDisplay(UpgraderRecipe recipe) {
-        super(getInputList(recipe), List.of(EntryIngredient.of(EntryStacks.of(recipe.getOutput(null)))));
+    public UpgraderDisplay(RecipeEntry<UpgraderRecipe> recipe) {
+        super(getInputList(recipe.value()), List.of(EntryIngredient.of(EntryStacks.of(recipe.value().getResult(null)))));
     }
 
     private static List<EntryIngredient> getInputList(UpgraderRecipe recipe) {

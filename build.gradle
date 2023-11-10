@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.2-SNAPSHOT'
+    id 'fabric-loom' version '1.4-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -34,12 +34,13 @@ dependencies {
 
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-    modImplementation "vazkii.patchouli:Patchouli:1.20.1-81-FABRIC"
 
-    modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:12.0.672"
-    modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:12.0.672"
+    //modImplementation "vazkii.patchouli:Patchouli:1.20.1-81-FABRIC"
 
-    modImplementation 'software.bernie.geckolib:geckolib-fabric-1.20.1:4.2.4'
+    modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:13.0.675"
+    modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:13.0.675"
+
+    modImplementation 'software.bernie.geckolib:geckolib-fabric-1.20.2:4.2.4'
 }
 
 processResources {
