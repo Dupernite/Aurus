@@ -1,0 +1,16 @@
+{
+  "structures": [
+    {
+      "structure": "aurus:dungeon",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:concentric_rings",
+    "count": 128,
+    "distance": 32,
+    "preferred_biomes": "#aurus:has_structure/dungeon",
+    "salt": 923812034,
+    "spread": 3
+  }
+}

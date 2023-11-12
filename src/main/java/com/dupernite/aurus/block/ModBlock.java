@@ -61,6 +61,9 @@ public class ModBlock {
     public static final Block PEDESTAL = registerBlock("pedestal",
             new PedestalBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
 
+    public static final Block STONE_PILLAR = registerBlock("stone_pillar",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+
     //public static final MineBlock MINE = registerGeoBlock("mine", new MineBlock());
 
 }

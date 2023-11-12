@@ -37,6 +37,7 @@ public class ModItemGroup {
                     entries.add(ModItem.QUARTZUM_ALLOY);
                     entries.add(ModItem.QUARTZ_DUST);
                     entries.add(ModItem.JELLYFISH_SPAWN_EGG);
+                    entries.add(ModBlock.STONE_PILLAR);
                 }).build());
     }
 }
