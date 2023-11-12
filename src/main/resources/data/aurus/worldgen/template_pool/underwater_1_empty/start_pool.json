@@ -1,0 +1,17 @@
+{
+  "name": "aurus:underwater_1_empty/start_pool",
+
+  "fallback": "minecraft:empty",
+
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "aurus:underwater_empty/underwater_1_empty",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

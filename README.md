@@ -14,7 +14,7 @@ But remember, we are still in **early stages of developments** so it can change 
 
 # Ideas and Development Progress
 
-* New Structures in all Dimensions - **0% Complete**
+* New Structures in all Dimensions - **8% Complete**
 * Small QOL changes to the game - **10% Complete**
 * Add new Armor Trims - **0% Complete**
 * New Biomes - **0% Complete**

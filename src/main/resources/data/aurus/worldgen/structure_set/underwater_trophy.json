@@ -1,0 +1,21 @@
+{
+  "structures": [
+    {
+      "structure": "aurus:underwater_1_trophy",
+      "weight": 1
+    },
+    {
+      "structure": "aurus:underwater_2_trophy",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 309712230,
+
+    "spacing": 50,
+
+    "separation": 6,
+
+    "type": "minecraft:random_spread"
+  }
+}

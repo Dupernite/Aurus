@@ -1,0 +1,17 @@
+{
+  "name": "aurus:underwater_2_trophy/start_pool",
+
+  "fallback": "minecraft:empty",
+
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "aurus:underwater_trophy/underwater_2_trophy",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "structures": [
+    {
+      "structure": "aurus:underwater_1_pot",
+      "weight": 1
+    },
+    {
+      "structure": "aurus:underwater_2_pot",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 564604120,
+
+    "spacing": 50,
+
+    "separation": 6,
+
+    "type": "minecraft:random_spread"
+  }
+}
