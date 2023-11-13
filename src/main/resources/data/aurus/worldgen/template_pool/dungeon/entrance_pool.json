@@ -3,27 +3,27 @@
   "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 3,
+      "weight": 5,
       "element": {
-        "location": "aurus:corridor_1",
+        "location": "aurus:dungeon/corridor_1",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
     },
     {
-      "weight": 3,
+      "weight": 4,
       "element": {
-        "location": "aurus:corridor_2",
+        "location": "aurus:dungeon/corridor_2",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
     },
     {
-      "weight": 3,
+      "weight": 1,
       "element": {
-        "location": "aurus:path_end_entrance",
+        "location": "aurus:dungeon/path_end_entrance",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
