@@ -3,6 +3,10 @@
     {
       "structure": "aurus:dungeon",
       "weight": 1
+    },
+    {
+      "structure": "aurus:dungeon_2",
+      "weight": 1
     }
   ],
   "placement": {

@@ -1,20 +1,20 @@
 {
-  "name": "aurus:dungeon/corridor_pool",
+  "name": "aurus:dungeon_2/entrance_pool",
   "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 4,
+      "weight": 5,
       "element": {
-        "location": "aurus:dungeon/path_end_corridor",
+        "location": "aurus:dungeon/corridor_1",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
     },
     {
-      "weight": 2,
+      "weight": 4,
       "element": {
-        "location": "aurus:dungeon/room_1",
+        "location": "aurus:dungeon/corridor_2",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -23,16 +23,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "aurus:dungeon/room_3",
-        "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
-      }
-    },
-    {
-      "weight": 6,
-      "element": {
-        "location": "aurus:dungeon/room_2",
+        "location": "aurus:dungeon/path_end_entrance",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
