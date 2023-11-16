@@ -11,6 +11,9 @@
 
   "entity.aurus.spear_entity": "Spear",
   "entity.aurus.jellyfish": "Jellyfish",
+  "entity.aurus.abyssal_crab": "Abyssal Crab",
+
+  "effect.aurus.abyssal": "Abyssal",
 
   "item.aurus.netherite_horse_armor": "Netherite Horse Armor",
   "item.aurus.coin": "Coin",
@@ -27,5 +30,6 @@
   "item.aurus.crystalized_soup":  "Crystalized Beetroot Soup",
   "item.aurus.quartzum_alloy": "Quartzum Alloy",
   "item.aurus.jellyfish_spawn_egg": "Jellyfish Spawn Egg",
+  "item.aurus.abyssal_crab_spawn_egg": "Abyssal Crab Spawn Egg",
   "item.aurus.quartz_dust": "Quartz Dust"
 }

@@ -18,6 +18,7 @@ public class ModItemGroup {
                 .icon(() -> new ItemStack(ModBlock.OVERWORLD_QUARTZ_ORE)).entries((displayContext, entries) -> {
                     entries.add(ModBlock.DEEPSLATE_OVERWORLD_QUARTZ_ORE);
                     entries.add(ModBlock.OVERWORLD_QUARTZ_ORE);
+                    entries.add(ModBlock.STONE_PILLAR);
                     entries.add(ModItem.QUARTZ_FRAGMENT);
                     entries.add(ModItem.CRYSTALIZED_SOUP);
                     entries.add(ModItem.NETHERITE_HORSE_ARMOR);
@@ -37,7 +38,7 @@ public class ModItemGroup {
                     entries.add(ModItem.QUARTZUM_ALLOY);
                     entries.add(ModItem.QUARTZ_DUST);
                     entries.add(ModItem.JELLYFISH_SPAWN_EGG);
-                    entries.add(ModBlock.STONE_PILLAR);
+                    entries.add(ModItem.ABYSSAL_CRAB_SPAWN_EGG);
                 }).build());
     }
 }

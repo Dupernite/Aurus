@@ -2,6 +2,7 @@ package com.dupernite.aurus;
 
 import com.dupernite.aurus.block.ModBlock;
 import com.dupernite.aurus.block.entity.ModBlockEntity;
+import com.dupernite.aurus.effect.ModEffect;
 import com.dupernite.aurus.recipe.ModRecipe;
 import com.dupernite.aurus.screen.ModScreenHandlers;
 import com.dupernite.aurus.item.ModItemGroup;
@@ -29,5 +30,6 @@ public class AurusMod implements ModInitializer {
         ModScreenHandlers.registerScreenHandler();
 
         ModRecipe.registerRecipe();
+        ModEffect.registerEffects();
     }
 }

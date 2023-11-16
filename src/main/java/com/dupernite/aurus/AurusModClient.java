@@ -2,6 +2,8 @@ package com.dupernite.aurus;
 
 import com.dupernite.aurus.block.ModBlock;
 import com.dupernite.aurus.entity.ModEntity;
+import com.dupernite.aurus.entity.custom.abyssal_crab.AbyssalEntityRenderer;
+import com.dupernite.aurus.entity.custom.abyssal_projectile.AbyssalProjectileEntityRenderer;
 import com.dupernite.aurus.entity.custom.jellyfish.JellyfishEntityRenderer;
 import com.dupernite.aurus.entity.custom.spear.SpearModel;
 import com.dupernite.aurus.entity.custom.spear.SpearModelRenderer;
@@ -31,8 +33,10 @@ public class AurusModClient implements ClientModInitializer {
         ModRegistry.registerModRegistries();
 
         HandledScreens.register(ModScreenHandlers.UPGRADER_SCREEN_HANDLER, UpgraderScreen::new);
-        EntityRendererRegistry.register(ModEntity.JELLYFISH, JellyfishEntityRenderer::new);
 
+        EntityRendererRegistry.register(ModEntity.JELLYFISH, JellyfishEntityRenderer::new);
+        EntityRendererRegistry.register(ModEntity.ABYSSAL_CRAB, AbyssalEntityRenderer::new);
+        EntityRendererRegistry.register(ModEntity.ABYSSAL_PROJECTILE, AbyssalProjectileEntityRenderer::new);
         EntityRendererRegistry.register(ModEntity.SPEAR_ENTITY, SpearModelRenderer::new);
 
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.SPEAR, SpearModel::getTexturedModelData);
