@@ -32,15 +32,14 @@ dependencies {
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-    // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    //modImplementation "vazkii.patchouli:Patchouli:1.20.1-81-FABRIC"
+    //modImplementation "vazkii.patchouli:Patchouli:${project.patchouli_version}-FABRIC"
 
-    modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:13.0.675"
-    modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:13.0.675"
+    modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:${project.rei_version}"
+    modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}"
 
-    modImplementation 'software.bernie.geckolib:geckolib-fabric-1.20.2:4.2.4'
+    modImplementation "software.bernie.geckolib:geckolib-fabric-${project.minecraft_version}:${project.geckolib_version}"
 }
 
 processResources {
@@ -79,7 +78,6 @@ jar {
     }
 }
 
-// configure the maven publication
 publishing {
     publications {
         mavenJava(MavenPublication) {
@@ -88,9 +86,6 @@ publishing {
     }
 
     repositories {
-        // Add repositories to publish to here.
-        // Notice: This block does NOT have the same function as the block in the top level.
-        // The repositories here will be used for publishing your artifact, not for
-        // retrieving dependencies.
+
     }
 }
