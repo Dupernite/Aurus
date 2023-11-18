@@ -1,9 +1,9 @@
 {
-  "type": "minecraft:jigsaw",
+  "type": "aurus:dungeon",
   "start_pool": "aurus:dungeon/start_pool",
 
-  "size": 2,
-  "max_distance_from_center": 80,
+  "size": 30,
+  "max_distance_from_center": 128,
 
 
   "biomes": "#aurus:has_structure/dungeon",
@@ -15,8 +15,6 @@
   },
 
   "project_start_to_heightmap": "OCEAN_FLOOR_WG",
-
-  "use_expansion_hack": false,
 
   "spawn_overrides": {
     "monster": {

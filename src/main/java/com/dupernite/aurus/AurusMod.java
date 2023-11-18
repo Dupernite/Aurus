@@ -7,11 +7,11 @@ import com.dupernite.aurus.recipe.ModRecipe;
 import com.dupernite.aurus.screen.ModScreenHandlers;
 import com.dupernite.aurus.item.ModItemGroup;
 import com.dupernite.aurus.item.ModItem;
+import com.dupernite.aurus.structure.ModStructures;
 import com.dupernite.aurus.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import software.bernie.geckolib.GeckoLib;
 
 public class AurusMod implements ModInitializer {
     public static final String MOD_ID = "aurus";
@@ -31,5 +31,6 @@ public class AurusMod implements ModInitializer {
 
         ModRecipe.registerRecipe();
         ModEffect.registerEffects();
+        ModStructures.registerStructure();
     }
 }
