@@ -5,6 +5,10 @@
 <!--- ![Modrith Version](https://img.shields.io/modrinth/v/6UjXU2BV?logo=modrinth&link=https%3A%2F%2Fmodrinth.com%2Fmod%2Faurus) -->
 <!--- ![Twitter Follow](https://img.shields.io/twitter/follow/TeamAurus?link=https%3A%2F%2Ftwitter.com%2Fteamaurus) -->
 
+---
+# Supported Versions
+
+<img alt="Supported versions" src="https://tschipcraft.ddns.net/mod_resources/supported/supported.php?untested_versions=1.20.3&supported_versions=1.20.2,1.20.1,1.20&total_versions=<1.20,1.20,1.20.1,1.20.2,1.20.3&icons=true&white_mode=false">
 
 ---
 **Aurus** is a WIP **free** **open-source** Minecraft mod, our plan is to make a mineraft mod where you will explore the **ocean** and find ruins of an **ancient civilization**, fight bosses, collect **ancient artifacts** and **weapons**.
@@ -14,7 +18,7 @@ But remember, we are still in **early stages of developments** so it can change 
 
 # Ideas and Development Progress
 
-* New Structures in all Dimensions - **8% Complete**
+* New Structures in all Dimensions - **0% Complete**
 * Small QOL changes to the game - **10% Complete**
 * Add new Armor Trims - **0% Complete**
 * New Biomes - **0% Complete**
