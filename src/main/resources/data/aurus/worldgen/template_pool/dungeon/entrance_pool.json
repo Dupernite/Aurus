@@ -28,15 +28,6 @@
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "location": "aurus:dungeon/stairs_level_1_to_2_entrance",
-        "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
-      }
     }
   ]
 }
