@@ -6,15 +6,18 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.world.GameMode;
 
 public class AbyssalEffect extends StatusEffect {
     public AbyssalEffect() {
-        super(StatusEffectCategory.HARMFUL, 0x0000FF);
+        super(StatusEffectCategory.HARMFUL, 0x292929);
     }
 
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
         entity.addVelocity(0, -0.01 * (amplifier + 1), 0);
+
         if (!entity.hasStatusEffect(StatusEffects.BLINDNESS)) {
             int pullEffectDuration = entity.getStatusEffect(ModEffect.ABYSSAL).getDuration();
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, pullEffectDuration, 0));

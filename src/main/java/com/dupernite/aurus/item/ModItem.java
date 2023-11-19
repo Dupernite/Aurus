@@ -45,6 +45,7 @@ public class ModItem {
     public static final Item JELLYFISH_SPAWN_EGG = registerItem("jellyfish_spawn_egg", new SpawnEggItem(ModEntity.JELLYFISH, 0x5BBCF4, 0x7BD4FF, new FabricItemSettings()));
     public static final Item ABYSSAL_CRAB_SPAWN_EGG = registerItem("abyssal_crab_spawn_egg", new SpawnEggItem(ModEntity.ABYSSAL_CRAB, 0x5BBCF4, 0x7BD4FF, new FabricItemSettings()));
     public static final Item QUARTZ_DUST = registerItem("quartz_dust", new Item(new FabricItemSettings()));
+    public static final Item ABYSSAL_CLAW = registerItem("abyssal_claw", new Item(new FabricItemSettings()));
 
 
     private static Item registerItem(String name, Item item){

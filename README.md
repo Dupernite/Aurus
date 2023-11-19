@@ -44,4 +44,4 @@ But remember, we are still in **early stages of developments** so it can change 
 * We still don't know which mods will be required. The only mods that we know will be required are **Fabric API** and **GeckoLib**.
 
 **Why is it taking so long?**
-* We are a small team of developers, and our idea of this mod is really big
+* We are a small team of developers, and our idea of this mod is huge.

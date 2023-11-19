@@ -13,7 +13,12 @@
   "entity.aurus.jellyfish": "Jellyfish",
   "entity.aurus.abyssal_crab": "Abyssal Crab",
 
-  "effect.aurus.abyssal": "Abyssal",
+  "effect.aurus.drowning": "Drowning",
+
+  "item.minecraft.potion.effect.drowning": "Drowning Potion",
+  "item.minecraft.splash_potion.effect.drowning": "Drowning Splash Potion",
+  "item.minecraft.lingering_potion.effect.drowning": "Drowning Lingering Potion",
+  "item.minecraft.tipped_arrow.effect.drowning": "Arrow of Drowning",
 
   "item.aurus.netherite_horse_armor": "Netherite Horse Armor",
   "item.aurus.coin": "Coin",

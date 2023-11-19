@@ -4,7 +4,8 @@
   "package": "com.dupernite.aurus.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-      "AurusModMixin"
+      "AurusModMixin",
+      "BrewingRecipeRegistryMixin"
   ],
   "client": [
   ],

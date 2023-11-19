@@ -10,7 +10,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModEffect {
-    public static final StatusEffect ABYSSAL = registerStatusEffect("abyssal", new AbyssalEffect());
+    public static final StatusEffect ABYSSAL = registerStatusEffect("drowning", new AbyssalEffect());
 
     private static StatusEffect registerStatusEffect(String name, StatusEffect statusEffect) {
         return Registry.register(Registries.STATUS_EFFECT, new Identifier(AurusMod.MOD_ID, name), statusEffect);
