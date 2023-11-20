@@ -28,13 +28,8 @@ import org.jetbrains.annotations.Nullable;
 
 public class UpgraderBlock extends BlockWithEntity implements BlockEntityProvider {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
-    //private static final VoxelShape SHAPE = Block.createCuboidShape(0, 0, 0, 16, 16, 16);
     public UpgraderBlock(Settings settings) {super(settings);}
 
-    /*@Override
-    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return super.getOutlineShape(state, world, pos, context);
-    }*/
     private static final LoadingCache<VoxelShape, Boolean> FULL_CUBE_SHAPE_CACHE = CacheBuilder.newBuilder().maximumSize(512L).weakKeys().build(new CacheLoader<VoxelShape, Boolean>() {
         public Boolean load(VoxelShape voxelShape) {
             return !VoxelShapes.matchesAnywhere(VoxelShapes.fullCube(), voxelShape, BooleanBiFunction.NOT_SAME);

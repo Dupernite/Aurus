@@ -1,7 +1,5 @@
 package com.dupernite.aurus.entity.custom.jellyfish.goal;
 
-// Inside the JellyfishEntity class or custom movement goal
-
 import com.dupernite.aurus.entity.ModEntity;
 import com.dupernite.aurus.entity.custom.jellyfish.JellyfishEntity;
 import com.dupernite.aurus.entity.custom.jellyfish.JellyfishEntityRenderer;
@@ -25,7 +23,7 @@ public class JellyfishMovementGoal extends Goal {
 
     @Override
     public boolean canStart() {
-        return this.jellyfish.hasPositionTarget() || random.nextInt(500) == 0; // Introduce pulsating movement randomly
+        return this.jellyfish.hasPositionTarget() || random.nextInt(500) == 0;
     }
 
     @Override

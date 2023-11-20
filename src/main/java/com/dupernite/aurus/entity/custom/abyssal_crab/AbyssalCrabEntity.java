@@ -2,8 +2,6 @@ package com.dupernite.aurus.entity.custom.abyssal_crab;
 
 import com.dupernite.aurus.entity.ModEntity;
 import com.dupernite.aurus.entity.custom.abyssal_projectile.AbyssalProjectileEntity;
-import com.dupernite.aurus.entity.custom.abyssal_projectile.AbyssalPullProjectile;
-import com.dupernite.aurus.entity.custom.jellyfish.JellyfishEntity;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
@@ -12,31 +10,20 @@ import net.minecraft.entity.ai.pathing.EntityNavigation;
 import net.minecraft.entity.ai.pathing.SpiderNavigation;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
-import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.HostileEntity;
-import net.minecraft.entity.mob.ShulkerEntity;
-import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.entity.mob.SpiderEntity;
-import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.projectile.ShulkerBulletEntity;
-import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.tag.FluidTags;
-import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.util.math.random.Random;
 import net.minecraft.world.*;
-import org.jetbrains.annotations.Nullable;
 import org.joml.Vector3f;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
@@ -50,10 +37,10 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 import java.util.EnumSet;
 
 
-public class AbyssalEntity extends HostileEntity implements GeoEntity {
+public class AbyssalCrabEntity extends HostileEntity implements GeoEntity {
     protected static final RawAnimation IDLE_ANM = RawAnimation.begin().thenLoop("animation.abyssal_crab.idle");
     private final AnimatableInstanceCache geoCache = GeckoLibUtil.createInstanceCache(this);
-    public AbyssalEntity(EntityType<? extends AbyssalEntity> entityType, World world) {
+    public AbyssalCrabEntity(EntityType<? extends AbyssalCrabEntity> entityType, World world) {
         super(entityType, world);
     }
     private static final TrackedData<Byte> ABYSSAL_CRAB_FLAGS;
@@ -63,7 +50,7 @@ public class AbyssalEntity extends HostileEntity implements GeoEntity {
         this.goalSelector.add(6, new LookAroundGoal(this));
         this.goalSelector.add(9, new AbyssalShootProjectileGoal(this, 0.8D));
         this.goalSelector.add(9, new AbyssalWallAndWaterGoal(this));
-        this.targetSelector.add(1, new AbyssalEntity.TargetGoal(this, PlayerEntity.class));
+        this.targetSelector.add(1, new AbyssalCrabEntity.TargetGoal(this, PlayerEntity.class));
     }
 
 
@@ -170,7 +157,7 @@ public class AbyssalEntity extends HostileEntity implements GeoEntity {
 
 
     private static class TargetGoal<T extends LivingEntity> extends ActiveTargetGoal<T> {
-        public TargetGoal(AbyssalEntity abyssal_crab, Class<T> targetEntityClass) {
+        public TargetGoal(AbyssalCrabEntity abyssal_crab, Class<T> targetEntityClass) {
             super(abyssal_crab, targetEntityClass, true);
         }
 
@@ -183,7 +170,7 @@ public class AbyssalEntity extends HostileEntity implements GeoEntity {
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
         controllers.add(new AnimationController<>(this, "Idling", 5, this::idleAnimController));
     }
-    protected <E extends AbyssalEntity> PlayState idleAnimController(final AnimationState<E> event) {
+    protected <E extends AbyssalCrabEntity> PlayState idleAnimController(final AnimationState<E> event) {
         if (!event.isMoving()) {
             return event.setAndContinue(IDLE_ANM);
         }
@@ -191,11 +178,11 @@ public class AbyssalEntity extends HostileEntity implements GeoEntity {
     }
 
     private static class AbyssalShootProjectileGoal extends Goal {
-        private final AbyssalEntity entity;
+        private final AbyssalCrabEntity entity;
         private int shotDelay;
 
-        public AbyssalShootProjectileGoal(AbyssalEntity abyssalEntity, double speed) {
-            this.entity = abyssalEntity;
+        public AbyssalShootProjectileGoal(AbyssalCrabEntity abyssalCrabEntity, double speed) {
+            this.entity = abyssalCrabEntity;
             this.setControls(EnumSet.of(Goal.Control.MOVE, Goal.Control.LOOK));
         }
 
@@ -244,10 +231,10 @@ public class AbyssalEntity extends HostileEntity implements GeoEntity {
     }
 
     private static class AbyssalWallAndWaterGoal extends Goal {
-        private final AbyssalEntity entity;
+        private final AbyssalCrabEntity entity;
 
-        public AbyssalWallAndWaterGoal(AbyssalEntity abyssalEntity) {
-            this.entity = abyssalEntity;
+        public AbyssalWallAndWaterGoal(AbyssalCrabEntity abyssalCrabEntity) {
+            this.entity = abyssalCrabEntity;
         }
 
         @Override

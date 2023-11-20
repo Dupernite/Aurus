@@ -34,7 +34,7 @@ public class SpearEntity extends PersistentProjectileEntity{
     private boolean dealtDamage;
     public int returnTimer;
     public SpearEntity(EntityType<? extends SpearEntity> entityType, World world) {
-        super((EntityType<? extends PersistentProjectileEntity>) entityType, world);
+        super(entityType, world);
     }
     public SpearEntity(World world, LivingEntity owner, ItemStack stack) {
         super(ModEntity.SPEAR_ENTITY, owner, world);

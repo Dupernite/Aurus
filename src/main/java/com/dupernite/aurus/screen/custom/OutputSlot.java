@@ -19,5 +19,4 @@ public class OutputSlot extends Slot{
     public boolean canInsert(ItemStack stack) {
         return false;
     }
-
 }

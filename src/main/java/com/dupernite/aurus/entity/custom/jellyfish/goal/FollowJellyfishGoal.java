@@ -28,9 +28,7 @@ public class FollowJellyfishGoal extends Goal {
 
     public FollowJellyfishGoal(JellyfishEntity jellyfish, double speed, float minDistance, float maxDistance) {
         this.jellyfish = jellyfish;
-        this.targetPredicate = (target) -> {
-            return target != null && target.getClass() != jellyfish.getClass(); // Make sure it's not the same type of jellyfish
-        };
+        this.targetPredicate = (target) -> target != null && target.getClass() != jellyfish.getClass();
         this.speed = speed;
         this.navigation = jellyfish.getNavigation();
         this.minDistance = minDistance;

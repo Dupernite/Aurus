@@ -9,12 +9,9 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.entity.projectile.ProjectileUtil;
-import net.minecraft.entity.projectile.ShulkerBulletEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.packet.s2c.play.EntitySpawnS2CPacket;
 import net.minecraft.particle.ParticleTypes;
@@ -247,7 +244,7 @@ public class AbyssalProjectileEntity extends ProjectileEntity implements GeoEnti
         this.setPosition(this.getX() + vec3d.x, this.getY() + vec3d.y, this.getZ() + vec3d.z);
         ProjectileUtil.setRotationFromVelocity(this, 0.5F);
         if (this.getWorld().isClient) {
-            this.getWorld().addParticle(ParticleTypes.END_ROD, this.getX() - vec3d.x, this.getY() - vec3d.y + 0.15, this.getZ() - vec3d.z, 0.0, 0.0, 0.0);
+            this.getWorld().addParticle(ParticleTypes.SCULK_SOUL, this.getX() - vec3d.x, this.getY() - vec3d.y + 0.15, this.getZ() - vec3d.z, 0.0, 0.0, 0.0);
         } else if (this.target != null && !this.target.isRemoved()) {
             if (this.stepCount > 0) {
                 --this.stepCount;
@@ -298,14 +295,14 @@ public class AbyssalProjectileEntity extends ProjectileEntity implements GeoEnti
             this.applyDamageEffects(livingEntity, entity);
             if (entity instanceof LivingEntity) {
                 LivingEntity livingEntity2 = (LivingEntity) entity;
-                livingEntity2.addStatusEffect(new StatusEffectInstance(ModEffect.ABYSSAL, 10 * 20, 3), (Entity) MoreObjects.firstNonNull(entity2, this));
+                livingEntity2.addStatusEffect(new StatusEffectInstance(ModEffect.DROWNING, 10 * 20, 3), (Entity) MoreObjects.firstNonNull(entity2, this));
             }
         }
     }
 
     protected void onBlockHit(BlockHitResult blockHitResult) {
         super.onBlockHit(blockHitResult);
-        ((ServerWorld)this.getWorld()).spawnParticles(ParticleTypes.EXPLOSION, this.getX(), this.getY(), this.getZ(), 2, 0.2, 0.2, 0.2, 0.0);
+        ((ServerWorld)this.getWorld()).spawnParticles(ParticleTypes.CRIT, this.getX(), this.getY(), this.getZ(), 2, 0.2, 0.2, 0.2, 0.0);
         this.playSound(SoundEvents.ENTITY_SHULKER_BULLET_HIT, 1.0F, 1.0F);
     }
 

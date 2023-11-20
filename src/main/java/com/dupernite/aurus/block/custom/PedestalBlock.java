@@ -104,9 +104,7 @@ public class PedestalBlock extends HorizontalFacingBlock implements Waterloggabl
                 world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
             }
             return true;
-        } else {
-            return Waterloggable.super.tryFillWithFluid(world, pos, state, fluidState);
-        }
+        } else return Waterloggable.super.tryFillWithFluid(world, pos, state, fluidState);
     }
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
