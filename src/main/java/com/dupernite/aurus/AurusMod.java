@@ -13,6 +13,7 @@ import com.dupernite.aurus.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import software.bernie.geckolib.GeckoLib;
 
 public class AurusMod implements ModInitializer {
     public static final String MOD_ID = "aurus";
@@ -21,7 +22,7 @@ public class AurusMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        //GeckoLib.initialize();
+        GeckoLib.initialize();
         ModItemGroup.registerModItemGroup();
         ModItem.registerModItems();
         ModBlock.registerModBlocks();

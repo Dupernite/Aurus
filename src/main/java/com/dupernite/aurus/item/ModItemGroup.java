@@ -37,6 +37,7 @@ public class ModItemGroup {
                     entries.add(ModBlock.PEDESTAL);
                     entries.add(ModItem.QUARTZUM_ALLOY);
                     entries.add(ModItem.QUARTZ_DUST);
+                    entries.add(ModItem.ABYSSAL_CLAW);
                     entries.add(ModItem.JELLYFISH_SPAWN_EGG);
                     entries.add(ModItem.ABYSSAL_CRAB_SPAWN_EGG);
                 }).build());

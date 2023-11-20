@@ -43,9 +43,9 @@ public class ModItem {
     public static final Item NIGHT_VISION_DIVING_UPGRADE = registerItem("night_vision_diving_upgrade", new Item(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
     public static final Item WATER_BREATHING__DIVING_UPGRADE = registerItem("water_breathing_diving_upgrade", new Item(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
     public static final Item JELLYFISH_SPAWN_EGG = registerItem("jellyfish_spawn_egg", new SpawnEggItem(ModEntity.JELLYFISH, 0x5BBCF4, 0x7BD4FF, new FabricItemSettings()));
-    public static final Item ABYSSAL_CRAB_SPAWN_EGG = registerItem("abyssal_crab_spawn_egg", new SpawnEggItem(ModEntity.ABYSSAL_CRAB, 0x5BBCF4, 0x7BD4FF, new FabricItemSettings()));
+    public static final Item ABYSSAL_CRAB_SPAWN_EGG = registerItem("abyssal_crab_spawn_egg", new SpawnEggItem(ModEntity.ABYSSAL_CRAB, 0x1357b7, 0x002354, new FabricItemSettings()));
     public static final Item QUARTZ_DUST = registerItem("quartz_dust", new Item(new FabricItemSettings()));
-    public static final Item ABYSSAL_CLAW = registerItem("abyssal_claw", new Item(new FabricItemSettings()));
+    public static final Item ABYSSAL_CLAW = registerItem("abyssal_claw", new Item(new FabricItemSettings().maxCount(16)));
 
 
     private static Item registerItem(String name, Item item){
