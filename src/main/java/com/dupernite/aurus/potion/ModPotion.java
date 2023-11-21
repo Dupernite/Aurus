@@ -2,6 +2,7 @@ package com.dupernite.aurus.potion;
 
 import com.dupernite.aurus.AurusMod;
 import com.dupernite.aurus.effect.ModEffect;
+import com.dupernite.aurus.util.AurusModUtils;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.potion.Potion;
 import net.minecraft.registry.Registries;
@@ -21,6 +22,6 @@ public class ModPotion {
     }
 
     public static void registerPotions() {
-        AurusMod.LOGGER.info("Registering Potions for " + AurusMod.MOD_ID);
+        AurusMod.LOGGER.info("[" + AurusModUtils.getModID() + "]" + " Registering Potions");
     }
 }

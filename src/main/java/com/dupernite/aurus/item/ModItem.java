@@ -7,6 +7,7 @@ import com.dupernite.aurus.item.custom.DivingSuitItem;
 import com.dupernite.aurus.item.custom.SpearItem;
 import com.dupernite.aurus.item.material.ModArmorMaterial;
 import com.dupernite.aurus.item.material.ModToolMaterial;
+import com.dupernite.aurus.util.AurusModUtils;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -16,7 +17,7 @@ import net.minecraft.util.Rarity;
 
 public class ModItem {
     public static void registerModItems()   {
-        AurusMod.LOGGER.info("Registering Mod Items for " + AurusMod.MOD_ID);
+        AurusMod.LOGGER.info("[" + AurusModUtils.getModID() + "]" + " Registering Items");
     }
 
     //Food

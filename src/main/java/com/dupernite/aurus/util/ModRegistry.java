@@ -44,7 +44,7 @@ public class ModRegistry {
         BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, ModItem.ABYSSAL_CLAW, ModPotion.ABYSSAL_POTION);
         BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(ModPotion.ABYSSAL_POTION, Items.REDSTONE, ModPotion.LONG_ABYSSAL_POTION);
         BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(ModPotion.ABYSSAL_POTION, Items.GLOWSTONE_DUST, ModPotion.STRONG_ABYSSAL_POTION);
-        AurusMod.LOGGER.info("Potion Recipes registered for: " + AurusMod.MOD_ID);
+        AurusMod.LOGGER.info("[" + AurusModUtils.getModID() + "]" + " Potion Recipes registered");
     }
 
     private static void registerRenderers() {
@@ -52,7 +52,7 @@ public class ModRegistry {
         EntityRendererRegistry.register(ModEntity.ABYSSAL_CRAB, AbyssalCrabEntityRenderer::new);
         EntityRendererRegistry.register(ModEntity.ABYSSAL_PROJECTILE, AbyssalProjectileEntityRenderer::new);
         EntityRendererRegistry.register(ModEntity.SPEAR_ENTITY, SpearModelRenderer::new);
-        AurusMod.LOGGER.info("Renderers registered for: " + AurusMod.MOD_ID);
+        AurusMod.LOGGER.info("[" + AurusModUtils.getModID() + "]" + " renderers are registered");
     }
 
     private static void registerModelLayer() {
@@ -61,14 +61,14 @@ public class ModRegistry {
 
 
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.SPEAR, SpearModel::getTexturedModelData);
-        AurusMod.LOGGER.info("Model Layers registered for: " + AurusMod.MOD_ID);
+        AurusMod.LOGGER.info("[" + AurusModUtils.getModID() + "]" + " Mode Layers registered");
     }
 
     private static void registerScreen() {
         HandledScreens.register(ModScreenHandlers.UPGRADER_SCREEN_HANDLER, UpgraderScreen::new);
-        AurusMod.LOGGER.info("Screens registered for: " + AurusMod.MOD_ID);
+        AurusMod.LOGGER.info("[" + AurusModUtils.getModID() + "]" + " Screens registered");
     }
     public static void registerModModels(){
-        AurusMod.LOGGER.info("Models registered for: " + AurusMod.MOD_ID);
+        AurusMod.LOGGER.info("[" + AurusModUtils.getModID() + "]" + " Models registered");
     }
 }

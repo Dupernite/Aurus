@@ -2,20 +2,16 @@ package com.dupernite.aurus.block;
 
 import com.dupernite.aurus.AurusMod;
 import com.dupernite.aurus.block.custom.*;
-import com.dupernite.aurus.block.entity.UpgraderBlockEntity;
+import com.dupernite.aurus.util.AurusModUtils;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
-import net.minecraft.block.enums.Instrument;
-import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
-import software.bernie.geckolib.GeckoLib;
 
 
 public class ModBlock {
@@ -38,7 +34,7 @@ public class ModBlock {
 
     //Register ModBlocks
     public static void registerModBlocks() {
-        AurusMod.LOGGER.debug("Registering ModBlocks for " + AurusMod.MOD_ID);
+        AurusMod.LOGGER.info("[" + AurusModUtils.getModID() + "]" + " Registering Blocks");
     }
 
     //Blocks

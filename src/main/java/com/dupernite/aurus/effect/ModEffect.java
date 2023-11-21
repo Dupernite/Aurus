@@ -1,6 +1,7 @@
 package com.dupernite.aurus.effect;
 
 import com.dupernite.aurus.AurusMod;
+import com.dupernite.aurus.util.AurusModUtils;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -14,6 +15,6 @@ public class ModEffect {
     }
 
     public static void registerEffects() {
-        AurusMod.LOGGER.info("Registering Mod Effects for " + AurusMod.MOD_ID);
+        AurusMod.LOGGER.info("[" + AurusModUtils.getModID() + "]" + " Registering Effects");
     }
 }

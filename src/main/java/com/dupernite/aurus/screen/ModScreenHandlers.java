@@ -1,6 +1,7 @@
 package com.dupernite.aurus.screen;
 
 import com.dupernite.aurus.AurusMod;
+import com.dupernite.aurus.util.AurusModUtils;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -13,6 +14,6 @@ public class ModScreenHandlers {
                     new ExtendedScreenHandlerType<>(UpgraderScreenHandler::new));
 
     public static void registerScreenHandler() {
-        AurusMod.LOGGER.info("Registering GUI Handlers for " + AurusMod.MOD_ID);
+        AurusMod.LOGGER.info("[" + AurusModUtils.getModID() + "]" + " Registering GUI Handlers");
     }
 }

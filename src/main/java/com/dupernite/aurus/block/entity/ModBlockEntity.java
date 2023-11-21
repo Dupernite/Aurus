@@ -2,6 +2,7 @@ package com.dupernite.aurus.block.entity;
 
 import com.dupernite.aurus.AurusMod;
 import com.dupernite.aurus.block.ModBlock;
+import com.dupernite.aurus.util.AurusModUtils;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.registry.Registries;
@@ -15,6 +16,6 @@ public class ModBlockEntity {
                             ModBlock.UPGRADER).build(null));
 
     public static void registerBlockEntities() {
-        AurusMod.LOGGER.info("Registering Block Entities for " + AurusMod.MOD_ID);
+        AurusMod.LOGGER.info("[" + AurusModUtils.getModID() + "]" + " Registering Block Entities");
     }
 }
