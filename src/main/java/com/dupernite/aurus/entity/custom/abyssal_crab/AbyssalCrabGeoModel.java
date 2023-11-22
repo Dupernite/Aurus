@@ -9,7 +9,6 @@ public class AbyssalCrabGeoModel extends GeoModel<AbyssalCrabEntity> {
     private final Identifier textureResource = new Identifier(AurusMod.MOD_ID, "textures/entity/abyssal_crab");
     private final Identifier animationResource = new Identifier(AurusMod.MOD_ID, "animations/abyssal_crab.animation.json");
 
-
     @Override
     public Identifier getModelResource(AbyssalCrabEntity animatable) {
         return modelResource;

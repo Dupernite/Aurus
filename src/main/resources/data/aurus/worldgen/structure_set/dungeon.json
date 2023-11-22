@@ -10,11 +10,13 @@
     }
   ],
   "placement": {
-    "type": "minecraft:concentric_rings",
-    "count": 128,
-    "distance": 32,
-    "preferred_biomes": "#aurus:has_structure/dungeon",
+    "type": "minecraft:random_spread",
     "salt": 923812034,
-    "spread": 3
+    "spacing": 30,
+    "separation": 20
+  },
+  "exclusion_zone": {
+    "chunk_count": 10,
+    "other_set": "minecraft:ocean_monuments"
   }
 }

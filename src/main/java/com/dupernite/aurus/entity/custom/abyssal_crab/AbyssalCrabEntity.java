@@ -5,6 +5,7 @@ import com.dupernite.aurus.entity.custom.abyssal_projectile.AbyssalProjectileEnt
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
+import net.minecraft.entity.ai.TargetPredicate;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.ai.pathing.EntityNavigation;
 import net.minecraft.entity.ai.pathing.SpiderNavigation;
@@ -16,6 +17,7 @@ import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.HostileEntity;
+import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.mob.SpiderEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.registry.tag.FluidTags;
@@ -24,6 +26,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.*;
+import org.jetbrains.annotations.Nullable;
 import org.joml.Vector3f;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
@@ -40,14 +43,14 @@ import java.util.EnumSet;
 public class AbyssalCrabEntity extends HostileEntity implements GeoEntity {
     protected static final RawAnimation IDLE_ANM = RawAnimation.begin().thenLoop("animation.abyssal_crab.idle");
     private final AnimatableInstanceCache geoCache = GeckoLibUtil.createInstanceCache(this);
+    public static Boolean isShooting = false;
     public AbyssalCrabEntity(EntityType<? extends AbyssalCrabEntity> entityType, World world) {
         super(entityType, world);
     }
     private static final TrackedData<Byte> ABYSSAL_CRAB_FLAGS;
 
     protected void initGoals() {
-        this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
-        this.goalSelector.add(6, new LookAroundGoal(this));
+        this.goalSelector.add(2, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
         this.goalSelector.add(9, new AbyssalShootProjectileGoal(this, 0.8D));
         this.goalSelector.add(9, new AbyssalWallAndWaterGoal(this));
         this.targetSelector.add(1, new AbyssalCrabEntity.TargetGoal(this, PlayerEntity.class));
@@ -120,6 +123,7 @@ public class AbyssalCrabEntity extends HostileEntity implements GeoEntity {
 
     }
 
+
     public EntityGroup getGroup() {
         return EntityGroup.ARTHROPOD;
     }
@@ -162,8 +166,7 @@ public class AbyssalCrabEntity extends HostileEntity implements GeoEntity {
         }
 
         public boolean canStart() {
-            float f = this.mob.getBrightnessAtEyes();
-            return f >= 0.5F ? false : super.canStart();
+            return super.canStart();
         }
     }
     @Override
@@ -213,6 +216,7 @@ public class AbyssalCrabEntity extends HostileEntity implements GeoEntity {
 
         private void shootProjectile() {
             PlayerEntity targetPlayer = (PlayerEntity) this.entity.getTarget();
+            isShooting = true;
             AbyssalProjectileEntity projectile = new AbyssalProjectileEntity(ModEntity.ABYSSAL_PROJECTILE, this.entity.getWorld());
 
             double eyeLevel = this.entity.getEyeY();
@@ -224,6 +228,7 @@ public class AbyssalCrabEntity extends HostileEntity implements GeoEntity {
             float g = MathHelper.sqrt((float)(d * d + f * f)) * 0.2F;
 
             projectile.setVelocity(d, e + g, f, 1.6F, 14);
+            isShooting = false;
 
             this.entity.getWorld().spawnEntity(projectile);
         }
@@ -265,6 +270,7 @@ public class AbyssalCrabEntity extends HostileEntity implements GeoEntity {
             return null;
         }
     }
+
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.geoCache;
