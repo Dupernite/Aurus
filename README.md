@@ -11,7 +11,7 @@
 <img alt="Supported versions" src="https://tschipcraft.ddns.net/mod_resources/supported/supported.php?untested_versions=1.20.3&supported_versions=1.20.2,1.20.1,1.20&total_versions=<1.20,1.20,1.20.1,1.20.2,1.20.3&icons=true&white_mode=false">
 
 ---
-**Aurus** is a WIP **free** **open-source** Minecraft mod, our plan is to make a mineraft mod where you will explore the **ocean** and find ruins of an **ancient civilization**, fight bosses, collect **ancient artifacts** and **weapons**.
+**Aurus** is a WIP **free** **open-source** Minecraft mod, our plan is to make a minecraft mod where you will explore the **ocean** and find ruins of an **ancient civilization**, fight bosses, collect **ancient artifacts** and **weapons**.
 But remember, we are still in **early stages of developments** so it can change a bit.
 
 ⚠️ **Since we are still in development, the updates won't be frequent. We will only update when we completely add a feature, but that doesn't mean that if we launch something in an update, we won't update it anymore!**
