@@ -1,6 +1,5 @@
 package com.dupernite.aurus.entity.custom.jellyfish;
 
-import blue.endless.jankson.annotation.Nullable;
 import com.dupernite.aurus.entity.ModEntity;
 import com.dupernite.aurus.entity.custom.jellyfish.goal.FollowJellyfishGoal;
 import com.dupernite.aurus.entity.custom.jellyfish.goal.JellyfishMovementGoal;

@@ -1,9 +1,41 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.abyssal_projectile.new": {
-			"loop": true
+		"abyssal_crab_projectile.shoot": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"internal": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.0": {
+							"vector": [0, 0, 270]
+						}
+					}
+				},
+				"middle": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.0": {
+							"vector": [-270, 0, 0]
+						}
+					}
+				},
+				"external": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.0": {
+							"vector": [0, 0, 270]
+						}
+					}
+				}
+			}
 		}
-	},
-	"geckolib_format_version": 2
+	}
 }

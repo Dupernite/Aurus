@@ -17,7 +17,6 @@ public class DrowningEffect extends StatusEffect {
         if (amplifier < 0) {
             cappedAmplifier = 256 + amplifier;
         }*/
-        System.out.println(amplifier);
 
         entity.addVelocity(0, (float)(-0.01 * (amplifier + 1)), 0);
         if (!entity.hasStatusEffect(StatusEffects.DARKNESS)) {

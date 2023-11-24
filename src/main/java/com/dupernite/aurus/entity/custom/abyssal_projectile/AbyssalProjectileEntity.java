@@ -39,18 +39,14 @@ import java.util.List;
 import java.util.UUID;
 
 public class AbyssalProjectileEntity extends ProjectileEntity implements GeoEntity {
-    private static final double field_30666 = 0.15;
-    @Nullable
-    private Entity target;
-    @Nullable
-    private Direction direction;
+    @Nullable private Entity target;
+    @Nullable private Direction direction;
     private int stepCount;
     private double targetX;
     private double targetY;
     private double targetZ;
-    @Nullable
-    private UUID targetUuid;
-    protected static final RawAnimation IDLE_ANM = RawAnimation.begin().thenLoop("animation.abyssal_projectile.idle");
+    @Nullable private UUID targetUuid;
+    protected static final RawAnimation IDLE_ANM = RawAnimation.begin().thenLoop("abyssal_crab_projectile.shoot");
     private final AnimatableInstanceCache geoCache = GeckoLibUtil.createInstanceCache(this);
 
     public AbyssalProjectileEntity(EntityType<AbyssalProjectileEntity> entityType, World world) {
@@ -68,7 +64,6 @@ public class AbyssalProjectileEntity extends ProjectileEntity implements GeoEnti
         return this.geoCache;
     }
 
-
     public AbyssalProjectileEntity(World world, LivingEntity owner, Entity target, Direction.Axis axis) {
         this(ModEntity.ABYSSAL_PROJECTILE, world);
         this.setOwner(owner);
@@ -79,7 +74,6 @@ public class AbyssalProjectileEntity extends ProjectileEntity implements GeoEnti
         this.refreshPositionAndAngles(d, e, f, this.getYaw(), this.getPitch());
         this.target = target;
         this.direction = Direction.UP;
-        this.changeTargetDirection(axis);
     }
 
     public SoundCategory getSoundCategory() {
@@ -115,7 +109,6 @@ public class AbyssalProjectileEntity extends ProjectileEntity implements GeoEnti
         if (nbt.containsUuid("Target")) {
             this.targetUuid = nbt.getUuid("Target");
         }
-
     }
 
     protected void initDataTracker() {
@@ -128,80 +121,6 @@ public class AbyssalProjectileEntity extends ProjectileEntity implements GeoEnti
 
     private void setDirection(@Nullable Direction direction) {
         this.direction = direction;
-    }
-
-    private void changeTargetDirection(@Nullable Direction.Axis axis) {
-        double d = 0.5;
-        BlockPos blockPos;
-        if (this.target == null) {
-            blockPos = this.getBlockPos().down();
-        } else {
-            d = (double)this.target.getHeight() * 0.5;
-            blockPos = BlockPos.ofFloored(this.target.getX(), this.target.getY() + d, this.target.getZ());
-        }
-
-        double e = (double)blockPos.getX() + 0.5;
-        double f = (double)blockPos.getY() + d;
-        double g = (double)blockPos.getZ() + 0.5;
-        Direction direction = null;
-        if (!blockPos.isWithinDistance(this.getPos(), 2.0)) {
-            BlockPos blockPos2 = this.getBlockPos();
-            List<Direction> list = Lists.newArrayList();
-            if (axis != Direction.Axis.X) {
-                if (blockPos2.getX() < blockPos.getX() && this.getWorld().isAir(blockPos2.east())) {
-                    list.add(Direction.EAST);
-                } else if (blockPos2.getX() > blockPos.getX() && this.getWorld().isAir(blockPos2.west())) {
-                    list.add(Direction.WEST);
-                }
-            }
-
-            if (axis != Direction.Axis.Y) {
-                if (blockPos2.getY() < blockPos.getY() && this.getWorld().isAir(blockPos2.up())) {
-                    list.add(Direction.UP);
-                } else if (blockPos2.getY() > blockPos.getY() && this.getWorld().isAir(blockPos2.down())) {
-                    list.add(Direction.DOWN);
-                }
-            }
-
-            if (axis != Direction.Axis.Z) {
-                if (blockPos2.getZ() < blockPos.getZ() && this.getWorld().isAir(blockPos2.south())) {
-                    list.add(Direction.SOUTH);
-                } else if (blockPos2.getZ() > blockPos.getZ() && this.getWorld().isAir(blockPos2.north())) {
-                    list.add(Direction.NORTH);
-                }
-            }
-
-            direction = Direction.random(this.random);
-            if (list.isEmpty()) {
-                for(int i = 5; !this.getWorld().isAir(blockPos2.offset(direction)) && i > 0; --i) {
-                    direction = Direction.random(this.random);
-                }
-            } else {
-                direction = (Direction)list.get(this.random.nextInt(list.size()));
-            }
-
-            e = this.getX() + (double)direction.getOffsetX();
-            f = this.getY() + (double)direction.getOffsetY();
-            g = this.getZ() + (double)direction.getOffsetZ();
-        }
-
-        this.setDirection(direction);
-        double h = e - this.getX();
-        double j = f - this.getY();
-        double k = g - this.getZ();
-        double l = Math.sqrt(h * h + j * j + k * k);
-        if (l == 0.0) {
-            this.targetX = 0.0;
-            this.targetY = 0.0;
-            this.targetZ = 0.0;
-        } else {
-            this.targetX = h / l * 0.15;
-            this.targetY = j / l * 0.15;
-            this.targetZ = k / l * 0.15;
-        }
-
-        this.velocityDirty = true;
-        this.stepCount = 10 + this.random.nextInt(5) * 10;
     }
 
     public void checkDespawn() {
@@ -245,28 +164,7 @@ public class AbyssalProjectileEntity extends ProjectileEntity implements GeoEnti
         ProjectileUtil.setRotationFromVelocity(this, 0.5F);
         if (this.getWorld().isClient) {
             this.getWorld().addParticle(ParticleTypes.SCULK_SOUL, this.getX() - vec3d.x, this.getY() - vec3d.y + 0.15, this.getZ() - vec3d.z, 0.0, 0.0, 0.0);
-        } else if (this.target != null && !this.target.isRemoved()) {
-            if (this.stepCount > 0) {
-                --this.stepCount;
-                if (this.stepCount == 0) {
-                    this.changeTargetDirection(this.direction == null ? null : this.direction.getAxis());
-                }
-            }
-
-            if (this.direction != null) {
-                BlockPos blockPos = this.getBlockPos();
-                Direction.Axis axis = this.direction.getAxis();
-                if (this.getWorld().isTopSolid(blockPos.offset(this.direction), this)) {
-                    this.changeTargetDirection(axis);
-                } else {
-                    BlockPos blockPos2 = this.target.getBlockPos();
-                    if (axis == Direction.Axis.X && blockPos.getX() == blockPos2.getX() || axis == Direction.Axis.Z && blockPos.getZ() == blockPos2.getZ() || axis == Direction.Axis.Y && blockPos.getY() == blockPos2.getY()) {
-                        this.changeTargetDirection(axis);
-                    }
-                }
-            }
         }
-
     }
 
     protected boolean canHit(Entity entity) {
@@ -302,7 +200,7 @@ public class AbyssalProjectileEntity extends ProjectileEntity implements GeoEnti
 
     protected void onBlockHit(BlockHitResult blockHitResult) {
         super.onBlockHit(blockHitResult);
-        ((ServerWorld)this.getWorld()).spawnParticles(ParticleTypes.CRIT, this.getX(), this.getY(), this.getZ(), 2, 0.2, 0.2, 0.2, 0.0);
+        ((ServerWorld)this.getWorld()).spawnParticles(ParticleTypes.SONIC_BOOM, this.getX(), this.getY(), this.getZ(), 2, 0.2, 0.2, 0.2, 0.0);
         this.playSound(SoundEvents.ENTITY_SHULKER_BULLET_HIT, 1.0F, 1.0F);
     }
 
@@ -323,7 +221,7 @@ public class AbyssalProjectileEntity extends ProjectileEntity implements GeoEnti
     public boolean damage(DamageSource source, float amount) {
         if (!this.getWorld().isClient) {
             this.playSound(SoundEvents.ENTITY_SHULKER_BULLET_HURT, 1.0F, 1.0F);
-            ((ServerWorld)this.getWorld()).spawnParticles(ParticleTypes.CRIT, this.getX(), this.getY(), this.getZ(), 15, 0.2, 0.2, 0.2, 0.0);
+            ((ServerWorld)this.getWorld()).spawnParticles(ParticleTypes.SONIC_BOOM, this.getX(), this.getY(), this.getZ(), 15, 0.2, 0.2, 0.2, 0.0);
             this.destroy();
         }
 
