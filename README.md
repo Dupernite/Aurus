@@ -1,4 +1,4 @@
-![Aurus](https://i.imgur.com/7M6znfp.png)
+![Aurus](https://i.imgur.com/kaU81ve.png)
 ![GitHub License](https://img.shields.io/github/license/Dupernite/Aurus)
 <a href="https://modrinth.com/mod/aurus"><img src="https://img.shields.io/modrinth/v/6UjXU2BV?logo=modrinth&link=https%3A%2F%2Fmodrinth.com%2Fmod%2Faurus"></a>
 <a href="https://twitter.com/TeamAurus"><img src="https://img.shields.io/twitter/follow/TeamAurus?link=https%3A%2F%2Ftwitter.com%2Fteamaurus"></a>
@@ -18,7 +18,7 @@ But remember, we are still in **early stages of developments** so it can change 
 
 # Ideas and Development Progress
 
-* New Structures in all Dimensions - **0% Complete**
+* New Structures in all Dimensions - **8% Complete**
 * Small QOL changes to the game - **10% Complete**
 * Add new Armor Trims - **0% Complete**
 * New Biomes - **0% Complete**
